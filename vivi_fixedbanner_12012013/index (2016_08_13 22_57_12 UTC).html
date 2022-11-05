@@ -1,0 +1,150 @@
+<html>
+<head>
+<!---------------horizontal banner-------------------------->
+<link rel="stylesheet" type="text/css" href="css.css" />
+<!---------------vertical banner---------------------------->
+<!--<link rel="stylesheet" type="text/css" href="vertical_banner.css" /> -->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.mousewheel.js"></script>
+<script type="text/javascript" src="jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.9.1.custom.js"></script>
+
+<script src="buttonlink.js"></script>
+
+<!--------
+    <script>
+    $(function() {
+        $( "#menubanner" ).draggable();
+    });
+    </script>
+--->
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        //$('#subcontent').hide();
+
+//------------bouncing home image
+
+        window.setInterval(
+        function(){
+                   $('#backgroundimage').animate({top:'100px'},1000);
+                   $('#backgroundimage').animate({top:'80px'},1000);
+                   },
+        500);
+
+//-----end bouncing image
+/*
+//-----------banner color change
+        window.setInterval(
+        function(){
+                   $("#menubanner").animate({backgroundColor: "#808080",}, 2000);
+                   $("#menubanner").animate({backgroundColor: "#aaaaaa",}, 2000);
+                   $("#menubanner").animate({backgroundColor: "#000000",}, 2000);
+        //--------ig $("#id").animate({backgroundColor: "red",}, 2000);
+                   },
+        500);
+//-----end banner color change
+*/
+    });
+</script>
+
+
+        <!--this is shadowbox scripts-->
+        <script type="text/javascript" src="shadowbox.js"></script>
+        <script type="text/javascript">
+                Shadowbox.init();
+        </script>
+
+
+
+</head>
+<body>
+
+<!----------------------top banner picture----------------------------------->
+<div id="topbanner">
+
+
+</div>
+
+<!----------------------Nav Buttoms------------------------------------------>
+<div id="menubanner">
+     <!--this is the div that contains all the menu items, for easy positioning -->
+     <div id="menucontainer">
+        <input type=radio name="menuradio" class="menuradio" onclick=reel() id="reelbutton"><label class="menubutton" for="reelbutton">reel</label>
+		<input type=radio name="menuradio" class="menuradio" onclick=shorts() id="shortsbutton"><label class="menubutton" for="shortsbutton">shorts</label>
+        <input type=radio name="menuradio" class="menuradio" onclick=gallery() id="gallerybutton"><label class="menubutton" for="gallerybutton">gallery</label>
+		<input type=radio name="menuradio" class="menuradio" onclick=other() id="otherbutton"><label class="menubutton" for="otherbutton">sandbox</label>
+        <input type=radio name="menuradio" class="menuradio" onclick=resume() id="resumebutton"><label class="menubutton" for="resumebutton">resume</label>
+     </div>
+</div>
+
+<p align="center"><img style="position:relative;" id='backgroundimage' src='gallery_images/humpty-dumpty.jpg'></p>
+
+<!--------------- BG BODYWRAP div------------------------>
+<div id="bodywrap">
+
+
+
+<!--------------index div-------------------->
+
+<div class="content" style="width:650px;">
+
+<div id="democontent">
+
+
+<!---------index bg image------->
+
+<p align=center>
++++WHAT'S NEW~
+<br>
+
+</p>
+
+
+
+
+
+
+
+
+<!--- Reel section ---->
+
+
+<p class="title">REEL 2012</p>
+<p class="title">:::Concept Develop:::</p>
+<p align=center>
+<iframe src="http://player.vimeo.com/video/38348673?title=0&amp;byline=0&amp;portrait=0" width="650" height="410" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</p>
+<p class="text">
+   <br>
+   +++ Mar
+</p>
+
+<p class="title">:::Lighting:::</p>
+<p align=center>
+<iframe src="http://player.vimeo.com/video/36747492?title=0&amp;byline=0&amp;portrait=0" width="650" height="410" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</p>
+
+<p class="text">
+   <br>
+   +++ Mainly focused on lighting, modeling & texturing. Extra eye candy art works in the end. -  Feb
+</p>
+
+</div>
+</div>
+
+</div>
+<div id="footer">
+</br></br>
+<p align=center>::: Copyright &copy; 2012 Vivi Qin All Rights Reserved.</p>
+</div>
+<!--
+<div id="subcontent">
+</div>
+-->
+<!-----------------------------end default content------------------------------->
+
+</body>
+</html>

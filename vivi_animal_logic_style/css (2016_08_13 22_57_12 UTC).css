@@ -1,0 +1,176 @@
+
+body {overflow:hidden;}
+
+
+/* ----------------------------- BG ----------------------------------*/
+
+
+#background0,#background1,#background2,#background3,#background4
+	{
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background-color:grey;
+	}
+
+#background0{
+	background: url("./images/bg1.JPG") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index:-20;
+}
+
+#background1{
+	background: url("./images/bg2.JPG") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index:-20;
+}
+#background2{
+	background: url("./images/bg3.JPG") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index:-20;
+}
+#background3{
+	background: url("./images/bg4.JPG") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index:-20;
+}
+#background4{
+	background: url("./images/bg5.JPG") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index:-20;
+}
+
+
+#background-curtain{
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background-color:000;
+	opacity:.4;
+	z-index:-19;
+}
+
+
+
+
+
+
+/* ----------------------------- CONTAINER BOX ----------------------------------*/
+
+#container{
+	width:850;
+
+	margin:5% auto 10% auto;
+	padding:10 20 10 20;
+	/*background:rgba(255,255,255,.5);*/
+	color:white;
+	font-family: verdana,Tahoma, Geneva, sans-serif;
+}
+
+
+#logo{
+	width:15%;
+	position:relative;
+	top:50;
+
+}
+
+
+
+
+
+
+
+
+
+#menus{
+	width:80%;
+	position:relative;
+	right:-20%;
+	/*background:rgba(200,200,200,.5);*/
+	color:white;
+	font-weight:bold;
+}
+.menubutton{
+	float:right;
+	padding:2 5;
+	margin: 0 20;
+	text-align:center;
+	font-size:13;
+	opacity:.7;
+}
+.menubutton:hover{
+	opacity:1;
+}
+#menus input[type=radio]{
+	display:none;
+}
+input[type="radio"]:checked + .menubutton{
+	background: rgba(255,255,255,.5);
+	opacity:1;
+}
+
+
+
+
+
+
+#contents{
+	width:100%;
+	height:60%;
+	margin:0 5 10 5;
+	position:relative;
+	overflow:hidden;
+	color:white;
+	/*background:rgba(200,200,200,.5);*/
+}
+
+#contents h1{
+    display:block;
+    position:relative;
+	top:2%;
+	height:18%;
+	font-size:35;
+	float:right;
+	font-weight:regular;
+	font-family:verdana;
+}
+.contentcontainer{
+	height:78%;
+	width:875;
+	position:relative;
+	bottom:0px;
+	overflow:scroll;
+	font-family:verdana;
+	font-size:11;
+	/*background:rgba(255,255,255,.3);*/
+}
+.contentimagebox{
+	float:right;
+	width:18%;
+	height:50%;
+	margin:1px;
+	/*border-style:solid;
+	border-width:1px;*/
+	background:rgba(255,255,255,.3);
+}
+

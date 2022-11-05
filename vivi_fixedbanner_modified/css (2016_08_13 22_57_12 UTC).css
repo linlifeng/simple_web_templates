@@ -1,0 +1,489 @@
+body
+{
+overflow:auto;
+  background: url(bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+#topbanner
+{
+	position: fixed;
+	top:0;
+	left: 0;
+	width:100%;
+	height: 100px;
+	z-index:40;
+	/*background-color:red;*/
+}
+#bannerlogo
+{
+	height:100%;
+	float:left;
+}
+
+
+#bodywrap
+{
+	height:auto;
+	overflow:auto;
+	width:100%;
+}
+ 
+#footer
+{
+	width:800px;
+	margin:auto;
+	font-size:12;
+	color:grey;
+}
+#loading
+{
+	position:fixed;
+	top:45%;
+	left:45%;
+	height:10%;
+}
+ 
+ /*------------Nav Buttoms-----------*/
+ 
+ 
+
+#menubanner
+{
+  padding:2px;  /*---banner thickness--*/
+  width:100%;
+  height:5%;
+  background-color:black;
+  border:none;
+  position:fixed;
+  top:-5%;
+  left:0;
+  z-index:50;
+  opacity:.7;
+  box-shadow: 0px 0px 15px #000;
+}
+#menucontainer
+{
+  text-align:center;
+  position:relative;
+  top:15%;
+  border:none;
+}
+
+.menuradio
+{
+display:none;
+}
+
+.menuradio:checked +label
+{
+  background-color:white;
+	color:white;
+	background: url('menuicon.png') 10% center no-repeat; 
+}
+
+.menubutton
+{
+  font-family:Lucida Console,arial;
+  text-transform:uppercase;
+  font-size:13;
+  font-weight:bold;
+  background:none;
+  background-color:black;
+  color:white;
+  top:0px; 
+  border:none;
+  border-radius:2px;
+  padding-bottom:0px;
+  padding-right:2.5%;
+  padding-left:2.5%;
+  margin:0px;
+
+}
+
+.menubutton:hover
+{
+  background-color:white;
+	color:black;
+ }
+
+
+ /*------------CONTENT-----------*/
+.bgimage
+{
+	z-index:-20;
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background-color:grey;
+}
+.content
+{
+ width:800;
+ margin:0px auto;
+ padding-top:120px;
+ overflow:auto;
+ z-index:-1;
+ color: #909090;
+}
+#shortsbg
+{
+	background: url("bgshorts.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#projectsbg
+{
+	background: url("bgprojects.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#gallerybg
+{
+	background: url("bggallery.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#reelbg
+{
+	background: url("bgreel.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#resumebg
+{
+	background: url("bgresume.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+ /*------------BOX IN CONTENT-----------*/
+/*
+#democontent
+{
+  width:650px;
+  margin:0px auto;
+}
+*/
+.title
+{
+  clear:both;
+  padding-top:10px;
+  color:black;
+}
+
+
+ /*------------THUMBNAIL WRAP-----------*/
+.thumbnail_complex
+{
+  float:left;
+  width:24%;
+  margin: 0.2%;
+}
+
+/*------------GALLERY-----------*/
+.gallery_thumbnail
+{
+  width:100%;
+  height:115px;
+  opacity:.8;
+  z-index:0;
+}
+.gallery_thumbnail:hover
+{
+  opacity:1;
+  z-index:10;
+}
+
+.thumbnail_complex span.play 
+{ display:none; 
+background: url('play-button-overlay.png') 55% -20% no-repeat; 
+background-size:80px 60px;
+margin: -80px 10px 0 0; 
+height: 80px; 
+position: relative; 
+z-index: 100; 
+opacity: 0.9; 
+filter: alpha(opacity=80); }
+.thumbnail_complex:hover span.play
+{
+display:block;
+}
+.thumbnail_complex:hover img.gallery_thumbnail
+{
+opacity:1;
+}
+
+.thumbnail_title
+{
+  color:red;
+  z-index:1;
+}
+
+/*--------------------projectboxes----*/
+.projectcomplex
+{
+	float:left;
+	width:95%;
+	margin-bottom:20px;
+	/*background-color:red;*/
+	color:black;
+}
+.projecttab
+{
+	
+	/*background-color:red;*/	
+	text-align:bottom;
+	font-size:11;
+	margin:0px;
+	padding-left: 12px;
+	padding-bottom:0px;
+	float:left;
+	border-bottom: 23px solid rgba(255,255,255,.6);
+	border-right: 50px solid transparent;
+	height: 0;
+	width: auto;
+}
+.projectbox
+{
+	background:rgba(255,255,255,.6);
+	padding:10px;
+	margin:0px;
+	float:left;
+	width:100%;
+	font-size:12;
+}
+
+
+/*--------------------separate project fly-in----*/
+/*
+#subcontent
+{
+  width:650;
+  position:fixed;
+  left:50%;
+  margin-left:-325;
+  background-color:red;
+  float:right;
+  position:fixed;
+  right:0;         
+
+  top:100;
+  height:80%;
+  z-index:10;
+}
+
+.project_detail
+{
+  clear:both;
+  width:650;
+  height:100%;
+  overflow:auto;
+  border-radius:15px;
+  box-shadow:25px 30px 40px 10px #ccc;
+
+}
+
+.project_nav
+{
+ clear:both;
+  wrap-flow:both;
+  wrap-margin: 10px;
+  width:650;
+  height:40px;
+  overflow:auto;
+}
+
+.nav_button
+{
+  font-family:Arial,Verdana,Dotum,Corbel,Lucida Console;
+  text-transform:uppercase; 
+  letter-spacing:2px;
+  font-size:13;
+  width:100px;
+  text-align:right;
+  font-weight:bold; 
+  background:none;
+  float:right;
+  color:666666;
+  top:0px;
+  border:none;
+  border-radius:2px;
+  padding:1 0 1 0;
+  margin:10 0 10 0;
+}
+
+.nav_button:hover
+{
+  background:black;
+  color:white;
+}
+*/
+/*---------------------shadowbox----------------------------*/
+
+
+
+
+#sb-title-inner,#sb-info-inner,#sb-loading-inner,div.sb-message{font-family:"HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:200;color:#fff;}
+#sb-container{position:fixed;margin:0;padding:0;top:0;left:0;z-index:999;text-align:left;visibility:hidden;display:none;}
+#sb-overlay{position:relative;height:100%;width:100%;}
+#sb-wrapper{position:absolute;visibility:hidden;width:100px;}
+#sb-wrapper-inner{position:relative;border:1px solid #303030;overflow:hidden;height:100px;}
+#sb-body{position:relative;height:100%;}
+#sb-body-inner{position:absolute;height:100%;width:100%;}
+#sb-player.html{height:100%;overflow:auto;}
+#sb-body img{border:none;}
+#sb-loading{position:relative;height:100%;}
+#sb-loading-inner{position:absolute;font-size:14px;line-height:24px;height:24px;top:50%;margin-top:-12px;width:100%;text-align:center;}
+#sb-loading-inner span{background:url(loading.gif) no-repeat;padding-left:34px;display:inline-block;}
+#sb-body,#sb-loading{background-color:#060606;}
+#sb-title,#sb-info{position:relative;margin:0;padding:0;overflow:hidden;}
+#sb-title,#sb-title-inner{height:26px;line-height:26px;}
+#sb-title-inner{font-size:16px;}
+#sb-info,#sb-info-inner{height:20px;line-height:20px;}
+#sb-info-inner{font-size:12px;}
+#sb-nav{float:right;height:16px;padding:2px 0;width:45%;}
+#sb-nav a{display:block;float:right;height:16px;width:16px;margin-left:3px;cursor:pointer;background-repeat:no-repeat;}
+#sb-nav-close{background-image:url(close.png);}
+#sb-nav-next{background-image:url(next.png);}
+#sb-nav-previous{background-image:url(previous.png);}
+#sb-nav-play{background-image:url(play.png);}
+#sb-nav-pause{background-image:url(pause.png);}
+#sb-counter{float:left;width:45%;}
+#sb-counter a{padding:0 4px 0 0;text-decoration:none;cursor:pointer;color:#fff;}
+#sb-counter a.sb-counter-current{text-decoration:underline;}
+div.sb-message{font-size:12px;padding:10px;text-align:center;}
+div.sb-message a:link,div.sb-message a:visited{color:#fff;text-decoration:underline;}
+
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 100%;
+	background: red;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	/*background: #dde;*/
+	background:#ccc;
+	position: relative;
+}
+
+.jspDrag
+{
+	/*background: #bbd;*/
+	background:#777;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}

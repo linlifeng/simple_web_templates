@@ -1,0 +1,49 @@
+/*.imagecontainer
+{
+  background-color:red;
+  height:25%;
+  float:left;
+  margin:10;
+}*/
+
+body
+{
+  background-color:black;
+}
+
+#container
+{
+  background-color:black;
+  width:60%;
+  margin:auto;
+}
+
+.imagecontainer
+{
+  width:20%;
+  z-index:1;
+}
+
+
+.thumbnail
+{
+  width:100%;
+  opacity:.3;
+  z-index:1;
+}
+
+.blown
+{
+  width: 60% ;
+  z-index:100;
+  opacity:1;
+/*  box-shadow: 25px 25px 25px grey; */
+}
+
+.caption
+{
+  font-family:"Arial";
+  color:white;
+  background-color:black;
+
+}
