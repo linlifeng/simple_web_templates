@@ -1,0 +1,19 @@
+#logo{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    display: block;
+}
+
+.inactive_menu_button{
+    background: black;
+    color: white
+}
+.active_menu_button{
+    background: white;
+    color: black,
+}
+.hover_menu_button{
+    background: grey;
+    color: white;
+}

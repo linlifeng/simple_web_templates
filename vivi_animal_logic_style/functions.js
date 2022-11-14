@@ -15,10 +15,6 @@ $(document).ready(function() {
 });
 
 
-
-
-
-
 /* ---------------------------------- JUMPING MENU ----------------------------*/
 
 function showcontent(button)

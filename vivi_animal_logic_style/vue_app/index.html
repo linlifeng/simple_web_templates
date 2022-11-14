@@ -1,0 +1,26 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<link href="css.css" rel="stylesheet" type="text/css">
+<div id="app">
+
+<logo></logo>
+
+<navigation display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+<navigation display_text="Gallery" target_element_id="gallery" name="gallery" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+<navigation display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+
+
+<content :current_section="current_section" title="home" content_file_path="path to home"></content>
+<content :current_section="current_section" title="gallery" content_file_path="path to gallery"></content>
+<content :current_section="current_section" title="projects" content_file_path="path to projects"></content>
+
+</div>
+
+<script src="./main.js"></script>
+<script src="./components/logo.js"></script>
+<script src="./components/navigation.js"></script>
+<script src="./components/content.js"></script>
+
+
+<script>
+	const mountedApp = app.mount('#app')
+</script>
