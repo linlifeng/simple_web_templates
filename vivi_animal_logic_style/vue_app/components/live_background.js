@@ -13,26 +13,20 @@ app.component('live_background', {
         required: true
       }
     },
-    data() {},
+    data() {
+        // background_style: "background: url('./assets/bg1.jpg') no-repeat center center fixed"
+    },
     template: /*html*/
     `
-    <div v-if=isCurrent id="background0">{{ current_section }} {{ image_url }}Background!!!!!!!!
-    </div>
-    <style>
-    #background0{
-        background: url("{{ image_url }}") no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        z-index: -20;
-        }
-    </style>
+        <div :style=background_style v-if=isCurrent></div>
     `,
 
     computed: {
       isCurrent() {
         return this.current_section == this.linked_content;
+      },
+      background_style() {
+        return "background: url('" + this.image_url + "') no-repeat center center fixed; background-size: cover; width:100%; height:100%; position:fixed; left:0; top:0; background-color:grey; z-index: -20"
       }
     },
 

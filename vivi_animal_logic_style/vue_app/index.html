@@ -2,30 +2,60 @@
 <link href="css.css" rel="stylesheet" type="text/css">
 <div id="app">
 
-<logo></logo>
-<navigation display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation>
-<navigation display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation>
-<navigation display_text="About" target_element_id="about" name="about" @update_current_section="update_current_section" :current_section="current_section"></navigation>
-<navigation display_text="Resume" target_element_id="resume" name="resume" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+	<logo logo_image="https://lh5.googleusercontent.com/wtjO2Kh90htoV246jgKtJfVnWnlE2jgpoUZTE8-O4McwmpsXNo0RqmWVd0FIvv45ZEAPV_Xi8WYu33XMbO6gRFI=w16383"></logo>
+	<div id="nav_button_box">
+		<transition name="slide-fade">
+		<navigation display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+		</transition>
+		<transition name="slide-fade">
+		<navigation display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+		</transition>
+		<transition name="slide-fade">
+		<navigation display_text="About" target_element_id="about" name="about" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+		</transition>
+		
+		<transition name="slide-fade">
+		<navigation display_text="Resume" target_element_id="resume" name="resume" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+		</transition>
 
-<!-- <div id="background0">{{ current_section }}afddasfdsfsdfa!!!!!!!!</div> -->
-<!-- <live_background></live_background> -->
-<transition name="slide-fade">
-	<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg1.jpg"></live_background>
-</transition>
-<transition name="slide-fade">
-	<content :current_section="current_section" title="home" content_file_path="path to home"></content>
-</transition>
+	</div>
+    
+	<div class="darken_backdrop"></div>
 
-<transition name="slide-fade">
-	<content :current_section="current_section" title="gallery" content_file_path="path to gallery"></content>
-</transition>
 
-<transition name="slide-fade">
-	<content :current_section="current_section" title="projects" content_file_path="path to projects"></content>
-</transition>
 
-</div>
+	<transition name="fade">
+		<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg1.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_section" title="home" content_file_path="content placeholder"></content>
+	</transition>
+
+
+	<transition name="fade">
+		<live_background :current_section="current_section" linked_content="projects" image_url="./assets/bg2.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_section" title="projects" content_file_path="content placeholder"></content>
+	</transition>
+
+
+	<transition name="fade">
+		<live_background :current_section="current_section" linked_content="about" image_url="./assets/bg3.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_section" title="about" content_file_path="content placeholder"></content>
+	</transition>
+
+
+	<transition name="fade">
+		<live_background :current_section="current_section" linked_content="resume" image_url="./assets/bg5.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_section" title="resume" content_file_path="content placeholder"></content>
+	</transition>
+
+</div> <!-- end app section -->
 
 <script src="./main.js"></script>
 <script src="./components/logo.js"></script>
@@ -40,25 +70,24 @@
 
 <style>
 	.fade-enter-active, .fade-leave-active {
-		transition: opacity .5s;
+		transition: opacity 0.9s;
 	}
-	.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	.fade-enter-from, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
 		opacity: 0;
 	}
-
 	.slide-fade-enter-active {
-  	transition: all .3s ease;
+  		transition: all .5s ease;
 	}
 	/* .slide-fade-enter {
   	transition: all .5s ease;
 	} */
 	.slide-fade-leave-active {
-	transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 	}
 	.slide-fade-enter-from, .slide-fade-leave-to
 	/* .slide-fade-leave-active below version 2.1.8 */ {
-	transform: translateX(10px);
-	opacity: 0;
+		transform: translateX(20px);
+		opacity: 0;
 	}
 
 

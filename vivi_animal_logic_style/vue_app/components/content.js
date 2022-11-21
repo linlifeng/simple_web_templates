@@ -24,7 +24,7 @@ app.component('content', {
     },
     template: /*html*/
     `
-    <div v-show=isCurrent>
+    <div v-show=isCurrent class="content_box">
       <h1>{{ this.title }}</h1>
       <p>{{ this.content_file_path }}</p>
     </div>
