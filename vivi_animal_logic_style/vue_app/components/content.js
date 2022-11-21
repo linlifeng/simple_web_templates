@@ -14,16 +14,17 @@ app.component('content', {
       },
     },
     data() {
-      return {
-        contents: [
-          {"title": "home", "content": "content of home"},
-          {"title": "gallery", "content": "gallery content"},
-          {"title": "projects", "content": "projects content"}
-        ]}
+      // return {
+      //   contents: [
+      //     {"title": "home", "content": "content of home"},
+      //     {"title": "about", "content": "about content"},
+      //     {"title": "projects", "content": "projects content"},
+      //     {"title": "resume", "content": "resume content"}
+      //   ]}
     },
     template: /*html*/
     `
-    <div v-if=isCurrent>
+    <div v-show=isCurrent>
       <h1>{{ this.title }}</h1>
       <p>{{ this.content_file_path }}</p>
     </div>

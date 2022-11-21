@@ -3,15 +3,27 @@
 <div id="app">
 
 <logo></logo>
-
 <navigation display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation>
-<navigation display_text="Gallery" target_element_id="gallery" name="gallery" @update_current_section="update_current_section" :current_section="current_section"></navigation>
 <navigation display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+<navigation display_text="About" target_element_id="about" name="about" @update_current_section="update_current_section" :current_section="current_section"></navigation>
+<navigation display_text="Resume" target_element_id="resume" name="resume" @update_current_section="update_current_section" :current_section="current_section"></navigation>
 
+<!-- <div id="background0">{{ current_section }}afddasfdsfsdfa!!!!!!!!</div> -->
+<!-- <live_background></live_background> -->
+<transition name="slide-fade">
+	<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg1.jpg"></live_background>
+</transition>
+<transition name="slide-fade">
+	<content :current_section="current_section" title="home" content_file_path="path to home"></content>
+</transition>
 
-<content :current_section="current_section" title="home" content_file_path="path to home"></content>
-<content :current_section="current_section" title="gallery" content_file_path="path to gallery"></content>
-<content :current_section="current_section" title="projects" content_file_path="path to projects"></content>
+<transition name="slide-fade">
+	<content :current_section="current_section" title="gallery" content_file_path="path to gallery"></content>
+</transition>
+
+<transition name="slide-fade">
+	<content :current_section="current_section" title="projects" content_file_path="path to projects"></content>
+</transition>
 
 </div>
 
@@ -19,8 +31,36 @@
 <script src="./components/logo.js"></script>
 <script src="./components/navigation.js"></script>
 <script src="./components/content.js"></script>
-
+<script src="./components/live_background.js"></script>
 
 <script>
 	const mountedApp = app.mount('#app')
 </script>
+
+
+<style>
+	.fade-enter-active, .fade-leave-active {
+		transition: opacity .5s;
+	}
+	.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+		opacity: 0;
+	}
+
+	.slide-fade-enter-active {
+  	transition: all .3s ease;
+	}
+	/* .slide-fade-enter {
+  	transition: all .5s ease;
+	} */
+	.slide-fade-leave-active {
+	transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+	}
+	.slide-fade-enter-from, .slide-fade-leave-to
+	/* .slide-fade-leave-active below version 2.1.8 */ {
+	transform: translateX(10px);
+	opacity: 0;
+	}
+
+
+
+</style>
