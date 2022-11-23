@@ -6,10 +6,10 @@
 	<logo logo_image="https://lh5.googleusercontent.com/wtjO2Kh90htoV246jgKtJfVnWnlE2jgpoUZTE8-O4McwmpsXNo0RqmWVd0FIvv45ZEAPV_Xi8WYu33XMbO6gRFI=w16383"></logo>
 	<div id="nav_button_box">
 		<!-- <transition name="fade"> -->
-		<navigation_button @click="hideSubmenu = true" display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+<!--		<navigation_button @click="hideSubmenu = true" display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>-->
 		<!-- </transition> -->
 		<!-- <transition name="fade"> -->
-		<navigation_button @click="hideSubmenu = !hideSubmenu" display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<navigation_button @click="hideSubmenu = !hideSubmenu" display_text="Projects" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
 		<!-- </transition> -->
 		<!-- <transition name="fade"> -->
 		<navigation_button @click="hideSubmenu = true" display_text="About" target_element_id="about" name="about" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
@@ -26,12 +26,22 @@
     
 	<div class="darken_backdrop"></div>
 
+	<div class="content_box home_default" v-if="current_section=='home'">
+		<h1>Hi,</h1>
+		<p>My name is Vivi, I'm a UX/UI designer. I like designing accessible and impactful products for all and am always seeking creative ways to make lives easier.</p>
+		<div class="home_page_nav" @click="update_current_project_section('foodie')">Foodie</div>
+		<div class="home_page_nav" @click="update_current_project_section('gallerypal')">GalleryPal</div>
+		<div class="home_page_nav" @click="update_current_project_section('neptune')">Neptune</div>
+	</div>
+
+
+
 	<transition name="fade">
-		<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg2.jpg"></live_background>
+		<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg1.jpg"></live_background>
 	</transition>
-	<transition name="slide-fade">
-		<content :current_section="current_section" title="home" content_file_path="./section_pages/home.html"></content>
-	</transition>
+<!--	<transition name="slide-fade">-->
+<!--		<content :current_section="current_section" title="home" content_file_path="./section_pages/home.html"></content>-->
+<!--	</transition>-->
 
 
 	<transition name="fade">
