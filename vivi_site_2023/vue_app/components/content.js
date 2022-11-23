@@ -25,8 +25,8 @@ app.component('content', {
     template: /*html*/
     `
     <div v-show=isCurrent class="content_box">
-      <h1>{{ this.title }}</h1>
-      <p>{{ this.content_file_path }}</p>
+      <!--<h1>{{ this.title }}</h1>-->
+      <embed type="text/html" :src=this.content_file_path width="100%" height="100%" />
     </div>
     `,
 
