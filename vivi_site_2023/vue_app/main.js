@@ -13,9 +13,10 @@ const app = Vue.createApp({
       this.current_project_section='';
     },
     update_current_project_section(target_element_id) {
-      this.current_section="projects";
+      this.current_section="home";
       this.current_project_section=target_element_id;
-    },
+      // alert(target_element_id + ";;;" + this.current_section + ';;;' + this.current_project_section);
+    }
   }
 })
 

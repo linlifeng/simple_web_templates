@@ -47,16 +47,13 @@
 .inactive_menu_button{
     filter: blur(1px)
 }
-#project_submenu{
-    background-color: red;
-    color: black;
-    top: 7%;
-}
 
-p{
-    content: opacity .5s;
-    display: block;
-    color: red;
+#project_submenu{
+    background-color:rgba(51, 51, 51, 0.5);
+    position: fixed;
+    top: 70px;
+    left: 60%;
+    padding: 5px;
 }
 
 .darken_backdrop{
