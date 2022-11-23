@@ -6,29 +6,31 @@
 	<logo logo_image="https://lh5.googleusercontent.com/wtjO2Kh90htoV246jgKtJfVnWnlE2jgpoUZTE8-O4McwmpsXNo0RqmWVd0FIvv45ZEAPV_Xi8WYu33XMbO6gRFI=w16383"></logo>
 	<div id="nav_button_box">
 		<!-- <transition name="fade"> -->
-		<navigation_button display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<navigation_button @click="hideSubmenu = true" display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
 		<!-- </transition> -->
 		<!-- <transition name="fade"> -->
-		<navigation_button display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<navigation_button @click="hideSubmenu = !hideSubmenu" display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
 		<!-- </transition> -->
 		<!-- <transition name="fade"> -->
-		<navigation_button display_text="About" target_element_id="about" name="about" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<navigation_button @click="hideSubmenu = true" display_text="About" target_element_id="about" name="about" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
 		<!-- </transition> -->
 		<!-- <transition name="fade"> -->
-		<navigation_button display_text="Resume" target_element_id="resume" name="resume" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<navigation_button @click="hideSubmenu = true" display_text="Resume" target_element_id="resume" name="resume" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
 		<!-- </transition> -->
 
+		<div v-if="!hideSubmenu" id="project_submenu" @click="hideSubmenu = true">
+			<navigation_button display_text="Foodiee" target_element_id="foodie" name="foodie" @update_current_section="update_current_project_section" :current_section="current_project_section"></navigation_button>
+			<navigation_button display_text="GalleryPal" target_element_id="gallerypal" name="gallerypal" @update_current_section="update_current_project_section" :current_section="current_project_section"></navigation_button>
+		</div>
 	</div>
     
 	<div class="darken_backdrop"></div>
 
-
-
 	<transition name="fade">
-		<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg1.jpg"></live_background>
+		<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg2.jpg"></live_background>
 	</transition>
 	<transition name="slide-fade">
-		<content :current_section="current_section" title="home" content_file_path="content placeholder"></content>
+		<content :current_section="current_section" title="home" content_file_path="./section_pages/home.html"></content>
 	</transition>
 
 
@@ -52,9 +54,23 @@
 		<live_background :current_section="current_section" linked_content="resume" image_url="./assets/bg5.jpg"></live_background>
 	</transition>
 	<transition name="slide-fade">
-		<content :current_section="current_section" title="resume" content_file_path="content placeholder"></content>
+		<content :current_section="current_section" title="resume" content_file_path="./section_pages/resume.html"></content>
 	</transition>
 
+
+	<transition name="fade">
+		<live_background :current_section="current_project_section" linked_content="foodie" image_url="./assets/bg5.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_project_section" title="foodie" content_file_path="./section_pages/foodie.html"></content>
+	</transition>
+
+	<transition name="fade">
+		<live_background :current_section="current_project_section" linked_content="gallerypal" image_url="./assets/bg5.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_project_section" title="gallerypal" content_file_path="./section_pages/gallerypal.html"></content>
+	</transition>
 </div> <!-- end app section -->
 
 <script src="./main.js"></script>

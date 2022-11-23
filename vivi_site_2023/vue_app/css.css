@@ -10,9 +10,11 @@
     top: 5%;
     left: 55%;
     display: block;
+    z-index: 1;
 }
 
-.active_menu_button, .inactive_menu_button{
+
+.active_menu_button, .inactive_menu_button, #project_submenu{
     background-color: rgba(51, 51, 51, 0.0);
     border-radius: 3px;
     border-width: 0;
@@ -45,9 +47,10 @@
 .inactive_menu_button{
     filter: blur(1px)
 }
-.hover_menu_button{
-    background: grey;
-    color: white;
+#project_submenu{
+    background-color: red;
+    color: black;
+    top: 7%;
 }
 
 p{
