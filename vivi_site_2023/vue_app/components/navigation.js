@@ -24,9 +24,9 @@ app.component('navigation_button', {
 
     computed: {
       isCurrent() {
-        if (this.current_section=="home" && (this.current_project_section=="foodie" || this.current_project_section=="gallerypal")) {
+        if (this.current_section=="home" && (this.current_project_section=="foodiee" || this.current_project_section=="gallerypal"  || this.current_project_section=="neptune")) {
           return this.current_section == this.target_element_id;
-        }else if(this.current_project_section=="foodie" || this.current_project_section=="gallerypal") {
+        }else if(this.current_project_section=="foodiee" || this.current_project_section=="gallerypal" || this.current_project_section=="neptune") {
           return this.current_project_section == this.target_element_id;
         }else{
           return this.current_section == this.target_element_id;
@@ -36,7 +36,7 @@ app.component('navigation_button', {
         return this.current_project_section == this.target_element_id;
       },
       computed_display_text() {
-        if (this.current_section=="home" && (this.current_project_section=="foodie" || this.current_project_section=="gallerypal")) {
+        if (this.current_section=="home" && this.target_element_id=="home" && (this.current_project_section=="foodiee" || this.current_project_section=="gallerypal" || this.current_project_section=="neptune")) {
           return this.display_text + " | " + this.current_project_section;
         }else{
           return this.display_text;

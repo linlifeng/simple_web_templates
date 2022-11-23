@@ -2,12 +2,16 @@ app.component('logo', {
     props: {
         logo_image: {
           type: String,
-          requireed: true
+          required: true
+        },
+        slogan:{
+            type: String,
+            required: true
         }
     },
     template: /*html*/
     `
-    <img :src=logo_image id="logo"/>
+    <div id="logo"><img :src=logo_image /> <span id="slogan">{{ slogan }}</span>
     
     `
   }

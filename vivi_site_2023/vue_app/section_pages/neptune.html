@@ -1,21 +1,11 @@
-<!-- adding carousel from external libraries -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js" integrity="sha512-wdUM0BxMyMC/Yem1RWDiIiXA6ssXMoxypihVEwxDc+ftznGeRu4s9Fmxl8PthpxOh5CQ0eqjqw1Q8ScgNA1moQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css" integrity="sha512-jxGmKjC/OykrTklkNK2NgnhNtKtUAADFY+rvSi3nA7dbaPRfjrSXYxHqX8iq5N6WTOntqEQZrEwW3L84sirfKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
 <style>
-html {
-  scroll-behavior: smooth;
-}
 body {
     margin: 0px;
 }
 .section_title{
     margin: auto;
     width: 100%;
-    background-color:#CE4B26;
+    /*background-color:#4287f5;*/
     display: block;
     color: white;
     font-family:Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -57,23 +47,18 @@ body {
     width: 100%;
     margin-bottom: 60px;
 }
-
 .section_content .section_illustrations .one_third_box{
-    /* float: left; */
-    display: inline-block;
-    vertical-align:middle;
-    margin-right: 45px;
+    float: left;
+    display: block;
     width: 270px;
     height: 200px;
-    background-color: #ffffff;
+    margin-right: 45px;
+    /*background-color: #eeeeee;*/
     box-shadow: #dddddd 2px 2px 6px 2px;
     border-radius: 10px;
     font-size: 0.9em;
 }
-.one_third_box_content{
-    display: inline-block;
-    vertical-align:middle;
-}
+
 .section_content .one_third_box p{
     margin: 20px;
     line-height: 1.5em
@@ -87,17 +72,12 @@ body {
     display: block;
     width: 100%;
     height: 100px;
-    border: 0px solid green;
-    background: #aaaaaa;
-    border-radius: 15px 15px 0px 0px;
+    border: 1px solid green;
 }
 hr{
     display: block;
     width: 100%;
     margin-bottom: 60px;
-    background-color: lightgrey;
-    height: 1px;
-    border: none
 }
 .splash{
     display: block;
@@ -105,7 +85,7 @@ hr{
     background-color:ghostwhite;
 }
 .splash p, .splash h1, .splash li{
-    color:#CE4B26;
+    color:#4287f5;
 }
 .splash h1{
     font-size: 5em;
@@ -149,28 +129,13 @@ p.quote{
 }
 
 
-#back_to_top_button{
-position: fixed;
-bottom: 20px;
-z-index: 10;
-}
-
-.swiper-container{
-        width: 30%;
-    }
-    .swiper-wrapper{
-        width: 100%;
-    }
-
-
-
 </style>
 
 
-<div class="splash section_content" id="top">
+<div class="splash section_content">
     <div class="container">
         <div class="left_half">
-        <h1>Foodiee</h1>
+        <h1>Neptune</h1>
         <p>Foodiee is a home cooking assistant app that combines the functions of grocery shopping and recipe searching. It not only helps the users deliver their ingredients but also helps them plan and manage their ingredients better, and inspires the users to try new ideas.</p>
         <ul>
             <li><strong>Timeline</strong>: 12 weeks</li>
@@ -196,17 +161,17 @@ z-index: 10;
         <h2>Design Process</h2>
         <p>For this project, I used the 6 steps design thinking process, which helps me to have clarity on breaking down this big design problem into smaller pieces and prioritizing these smaller tasks.</p>
     
-        <div class="big_round_button"><a href="#emphathize">EMPHATHIZE</a></div>
-        <div class="big_round_button"><a href="#define">DEFINE</a></div>
-        <div class="big_round_button"><a href="#ideate">IDEATE</a></div>
-        <div class="big_round_button"><a href="#prototype">PROTOTYPE</a></div>
-        <div class="big_round_button"><a href="#test">TEST</a></div>
-        <div class="big_round_button"><a href="#implement">IMPLEMENT</a></div>
+        <div class="big_round_button">EMPHATHIZE</div>
+        <div class="big_round_button">DEFINE</div>
+        <div class="big_round_button">IDEATE</div>
+        <div class="big_round_button">PROTOTYPE</div>
+        <div class="big_round_button">TEST</div>
+        <div class="big_round_button">IMPLEMENT</div>
 
     </div>
 </div>
 
-<div class="section_title" id="emphathize">
+<div class="section_title">
     <div class="container">
         <h1>Empathize</h1>
         <p>“ Wanna solve problems? Walk in the shoes of the users ...”</p>
@@ -293,32 +258,27 @@ z-index: 10;
         <h2>Personas</h2>
         <p>After analyzing the information, I decided to divide the end users into two groups, one older user group, which has a bigger family structure, also has a longer cooking experience.  Another group is the younger users group who just started life on his/her own, and doesn't have much cooking experience, but are forced to cook more to save money. </p>
         
-
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="../assets/bg1.jpg" /></div>
-                    <div class="swiper-slide"><img src="../assets/bg2.jpg" /></div>
-                    <div class="swiper-slide"><img src="../assets/bg3.jpg" /></div>
-                </div>
-                <!-- If you need pagination -->
-                <div class="swiper-pagination"></div>
-            
-                <!-- If you need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            
-                <!-- If you need scrollbar -->
-                <div class="swiper-scrollbar"></div>
-            </div>
-
+        <section id="image-carousel" class="splide" aria-label="Personas">
+          <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="../assets/bg1.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../assets/bg2.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../assets/bg3.jpg" alt="">
+                    </li>
+                </ul>
+          </div>
+        </section>
 
     </div>
 </div>
 
 
-<div class="section_title" id="define">
+<div class="section_title">
     <div class="container">
         <h1>Define</h1>
         <p>We know the WHY,  HOW can we help?</p>
@@ -343,7 +303,7 @@ z-index: 10;
     </div>
 </div>
 
-<div class="section_title" id="ideate">
+<div class="section_title">
     <div class="container">
         <h1>Ideate</h1>
         <p>NOW! It’s time to brainstorm!</p>
@@ -377,7 +337,7 @@ z-index: 10;
     </div>
 </div>
 
-<div class="section_title" id="prototype">
+<div class="section_title">
     <div class="container">
         <h1>High Fidelity Prototype</h1>
         <p>Let’s put all the ideas together and build it.</p>
@@ -391,7 +351,7 @@ z-index: 10;
     </div>
 </div>
 
-<div class="section_title" id="test">
+<div class="section_title">
     <div class="container">
         <h1>Testing</h1>
         <p>Test the prototype and find the hidden problems.</p>
@@ -459,31 +419,6 @@ z-index: 10;
 </div>
 
 
-<a href="#top"><div id="back_to_top_button">Back To Top</div></a>
-
 <script>
-    $(function() {
-        // Initialize swiper when document ready
-        var mySwiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-
-            // If you need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // If you need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        })
-    });
+  new Splide( '#image-carousel' ).mount();
 </script>

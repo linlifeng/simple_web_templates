@@ -3,7 +3,7 @@
 <link href="css.css" rel="stylesheet" type="text/css">
 <div id="app">
 
-	<logo logo_image="https://lh5.googleusercontent.com/PBqdUY-FRXt3ttFRTcpW5ZhiDPqkh5YbBEx4rsdfAiOBGCrjYPAzCMjdIGLtcG05aa4KP839SoAfgi5x8yCasSc=w16383" @click="update_current_section('home'), hideSubmenu=true"></logo>
+	<logo logo_image="https://lh5.googleusercontent.com/Z6v9DcnhKxEYuRLn8M9P0ZALB3xcNOHw4PxGZzjcm8rHB7d6g-50AVvdBspR301BILZi239DsZ48UweXzFuUBuk=w16383" slogan="VIVI YANG QIN" @click="update_current_section('home'), hideSubmenu=true"></logo>
 	<div id="nav_button_box">
 		<!-- <transition name="fade"> -->
 		<!-- <navigation_button @click="hideSubmenu = true" display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>-->
@@ -19,8 +19,10 @@
 		<!-- </transition> -->
 
 		<div v-if="!hideSubmenu" id="project_submenu" @click="hideSubmenu = true">
-			<navigation_button display_text="Foodiee" target_element_id="foodie" name="foodie" @update_current_section="update_current_project_section" :current_section="home" :current_project_section="current_project_section"></navigation_button>
+			<navigation_button display_text="Foodiee" target_element_id="foodiee" name="foodiee" @update_current_section="update_current_project_section" :current_section="home" :current_project_section="current_project_section"></navigation_button>
 			<navigation_button display_text="GalleryPal" target_element_id="gallerypal" name="gallerypal" @update_current_section="update_current_project_section" :current_section="home" :current_project_section="current_project_section"></navigation_button>
+			<navigation_button display_text="Neptune" target_element_id="neptune" name="neptune" @update_current_section="update_current_project_section" :current_section="home" :current_project_section="current_project_section"></navigation_button>
+
 		</div>
 	</div>
     
@@ -29,9 +31,9 @@
 	<div class="content_box home_default" v-if="current_section=='home'">
 		<h1>Hi,</h1>
 		<p>My name is Vivi, I'm a UX/UI designer. I like designing accessible and impactful products for all and am always seeking creative ways to make lives easier.</p>
-		<div class="home_page_nav" @click="update_current_project_section('foodie')">Foodie</div>
-		<div class="home_page_nav" @click="update_current_project_section('gallerypal')">GalleryPal</div>
-		<div class="home_page_nav" @click="update_current_project_section('neptune')">Neptune</div>
+		<div class="home_page_nav" @click="update_current_project_section('foodiee'), hideSubmenu = true">Foodie</div>
+		<div class="home_page_nav" @click="update_current_project_section('gallerypal'), hideSubmenu = true">GalleryPal</div>
+		<div class="home_page_nav" @click="update_current_project_section('neptune'), hideSubmenu = true">Neptune</div>
 	</div>
 
 
@@ -45,7 +47,7 @@
 
 
 	<transition name="fade">
-		<live_background :current_section="current_section" linked_content="projects" image_url="./assets/bg2.jpg"></live_background>
+		<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg2.jpg"></live_background>
 	</transition>
 	<transition name="slide-fade">
 		<content :current_section="current_section" title="projects" :current_project_section="current_project_section" content_file_path="./section_pages/foodie.html"></content>
@@ -69,10 +71,10 @@
 
 
 	<transition name="fade">
-		<live_background :current_section="current_project_section" linked_content="foodie" image_url="./assets/bg5.jpg"></live_background>
+		<live_background :current_section="current_project_section" linked_content="foodiee" image_url="./assets/bg5.jpg"></live_background>
 	</transition>
 	<transition name="slide-fade">
-		<content :current_section="current_project_section" title="foodie" :current_project_section="current_project_section" content_file_path="./section_pages/foodie.html"></content>
+		<content :current_section="current_project_section" title="foodiee" :current_project_section="current_project_section" content_file_path="./section_pages/foodie.html"></content>
 	</transition>
 
 	<transition name="fade">
@@ -80,6 +82,13 @@
 	</transition>
 	<transition name="slide-fade">
 		<content :current_section="current_project_section" title="gallerypal" :current_project_section="current_project_section" content_file_path="./section_pages/gallerypal.html"></content>
+	</transition>
+
+	<transition name="fade">
+		<live_background :current_section="current_project_section" linked_content="neptune" image_url="./assets/bg5.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_project_section" title="neptune" :current_project_section="current_project_section" content_file_path="./section_pages/neptune.html"></content>
 	</transition>
 </div> <!-- end app section -->
 
