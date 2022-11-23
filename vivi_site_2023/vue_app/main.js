@@ -10,6 +10,7 @@ const app = Vue.createApp({
   methods: {
     update_current_section(target_element_id) {
       this.current_section=target_element_id;
+      this.current_project_section='';
     },
     update_current_project_section(target_element_id) {
       this.current_section="projects";
