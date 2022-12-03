@@ -1,0 +1,91 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<link href="css.css" rel="stylesheet" type="text/css">
+<div id="app">
+
+	<!-- <logo logo_image="https://assets-global.website-files.com/614716f50b4f49202fdd0087/616e745e89bb6e582031da82_pasted-image-0-20.png"></logo> -->
+	<div id="nav_button_box">
+		<!-- <transition name="fade"> -->
+		<navigation_button display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<!-- </transition> -->
+		<!-- <transition name="fade"> -->
+		<navigation_button display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<!-- </transition> -->
+		<!-- <transition name="fade"> -->
+		<navigation_button display_text="About" target_element_id="about" name="about" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<!-- </transition> -->
+		<!-- <transition name="fade"> -->
+		<navigation_button display_text="Resume" target_element_id="resume" name="resume" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<!-- </transition> -->
+
+	</div>
+    
+	<div class="darken_backdrop"></div>
+
+
+
+	<transition name="fade">
+		<live_background :current_section="current_section" linked_content="home" image_url="./assets/bg1.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_section" title="home" content_file_path="./section_pages/resume.html"></content>
+	</transition>
+
+
+	<transition name="fade">
+		<live_background :current_section="current_section" linked_content="projects" image_url="./assets/bg2.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_section" title="projects" content_file_path="./section_pages/projects.html"></content>
+	</transition>
+
+
+	<transition name="fade">
+		<live_background :current_section="current_section" linked_content="about" image_url="./assets/bg3.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_section" title="about" content_file_path="./index.html"></content>
+	</transition>
+
+
+	<transition name="fade">
+		<live_background :current_section="current_section" linked_content="resume" image_url="./assets/bg5.jpg"></live_background>
+	</transition>
+	<transition name="slide-fade">
+		<content :current_section="current_section" title="resume" content_file_path="content placeholder"></content>
+	</transition>
+
+</div> <!-- end app section -->
+
+<script src="../main.js"></script>
+<!-- <script src="../components/logo.js"></script> -->
+<script src="../components/navigation.js"></script>
+<script src="../components/content.js"></script>
+<script src="../components/live_background.js"></script>
+
+<script>
+	const mountedApp = app.mount('#app')
+</script>
+
+
+<style>
+	.fade-enter-active, .fade-leave-active {
+		transition: opacity 0.9s;
+	}
+	.fade-enter-from, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+		opacity: 0;
+	}
+	.slide-fade-enter-active {
+  		transition: all .5s ease;
+	}
+	/* .slide-fade-enter {
+  	transition: all .5s ease;
+	} */
+	.slide-fade-leave-active {
+		transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+	}
+	.slide-fade-enter-from, .slide-fade-leave-to
+	/* .slide-fade-leave-active below version 2.1.8 */ {
+		transform: translateX(20px);
+		opacity: 0;
+	}
+</style>
