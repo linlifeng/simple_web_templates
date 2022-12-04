@@ -2,7 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       message: 'Hello Ha!!',
-      current_section: "home"
+      current_section: "foodiee"
     }
   },
   methods: {
