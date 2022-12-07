@@ -18,7 +18,7 @@
                   $('#subcontent').hide();
 				  $('#backgroundimage').hide();
                   $('#bodywrap').animate({opacity:1});
-                  $.post('shorts.php',{contenttype:""},
+                  $.post('shorts.html',{contenttype:""},
                   function(output) {
                                    $('#bodywrap').html(output).fadeIn();
                                    });
