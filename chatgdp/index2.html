@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS styles for slideshow and its elements go here */
+/* slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* hide the images by default */
+.slideshow-slide {
+  display: block;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index: 1;
+}
+
+/* next and previous buttons */
+.slideshow-prev, .slideshow-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  z-index: 10;
+}
+
+/* position the "next button" to the right */
+.slideshow-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add a black background color with a little bit see-through */
+.slideshow-prev:hover, .slideshow-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* the indicator container */
+.slideshow-indicators {
+  text-align: center;
+  background-color: #ddd;
+  line-height: 15px;
+  color: #000;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* hover state */
+.slideshow-indicators:hover {
+  background-color: #bbb;
+}
+
+/* the indicators (bullets) */
+.slideshow-indicator {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #bbb;
+}
+
+/* active state (black background) */
+.active {
+  background-color: #717171;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slideshow-slide">
+            <!-- First slide -->
+            <img src="slide1.jpg" alt="Image 1">
+            <div class="slideshow-caption">Caption 1</div>
+        </div>
+        <div class="slideshow-slide">
+            <!-- Second slide -->
+            <img src="slide2.jpg" alt="Image 2">
+            <div class="slideshow-caption">Caption 2</div>
+        </div>
+        <div class="slideshow-slide">
+            <!-- Second slide -->
+            <img src="slide3.jpg" alt="Image 2">
+            <div class="slideshow-caption">Caption 2</div>
+        </div>
+        <!-- Add more slides here if desired -->
+    </div>
+    <div class="slideshow-controls">
+        <a class="slideshow-prev" onclick="prevSlide()">&#10094;</a>
+        <a class="slideshow-next" onclick="nextSlide()">&#10095;</a>
+    </div>
+    <div class="slideshow-indicators">
+        <span class="slideshow-indicator" onclick="currentSlide(1)"></span>
+        <span class="slideshow-indicator" onclick="currentSlide(2)"></span>
+        <span class="slideshow-indicator" onclick="currentSlide(3)"></span>
+
+        <!-- Add more indicators here if desired -->
+    </div>
+    <script>
+        // JavaScript functions for controlling the slideshow go here
+// Set the initial display styles for the slides
+var slides = document.querySelectorAll(".slideshow-slide");
+var indicators = document.querySelectorAll(".slideshow-indicator");
+for (var i = 0; i < slides.length; i++) {
+  //slides[i].style.display = "none";
+  slides[i].style.opacity = 0;
+  slides[i].style.transition = "opacity 1s ease-in-out";
+}
+  slides[0].style.opacity = 1;
+
+// Set the initial slide index to 0 (the first slide)
+var slideIndex = 0;
+
+// Show the first slide
+slides[slideIndex].style.display = "block";
+
+// Define a function to advance the slide show to the next slide
+function nextSlide() {
+  // Hide the current slide
+  slides[slideIndex].style.opacity = 0;
+  indicators[slideIndex].style.backgroundColor = "#bbb";
+
+  // Increment the slide index
+  slideIndex++;
+
+  // If the slide index is greater than the total number of slides, reset it to 0
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+
+  // Show the next slide
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex].style.opacity = 1;
+  indicators[slideIndex].style.backgroundColor = "black";
+
+}
+
+// Define a function to move the slide show to the previous slide
+function prevSlide() {
+  // Hide the current slide
+  slides[slideIndex].style.opacity = 0;
+  indicators[slideIndex].style.backgroundColor = "#bbb";
+
+  // Decrement the slide index
+  slideIndex--;
+
+  // If the slide index is less than 0, set it to the last slide in the slide show
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  // Show the previous slide
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex].style.opacity = 1;
+  indicators[slideIndex].style.backgroundColor = "black";
+}
+
+// Define a function to start the slide show
+function startSlideshow() {
+  // Set the interval to call the "nextSlide" function every 5 seconds
+  setInterval(nextSlide, 5000);
+}
+
+// Start the slide show
+// startSlideshow();
+
+
+
+
+    </script>
+</body>
+</html>
+
