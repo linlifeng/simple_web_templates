@@ -2,23 +2,36 @@
 <html>
 <head>
     <style>
+
+
         /* CSS styles for slideshow and its elements go here */
 /* slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
+    display: block;
+  max-width: 100%;
+  /* position: relative; */
   margin: auto;
 }
 
 /* hide the images by default */
 .slideshow-slide {
   display: block;
-  position:absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   top:0px;
   left:0px;
   z-index: 1;
+  overflow: hidden;
 }
-
+.slideshow-slide center{
+    /* width: 100%; */
+    height: 90%;
+    margin: auto;
+}
+.slideshow-caption{
+    height: 9%;
+}
 /* next and previous buttons */
 .slideshow-prev, .slideshow-next {
   cursor: pointer;
@@ -27,7 +40,7 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: #bbb;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -59,6 +72,7 @@
   height: 12px;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 10;
 }
 
 /* hover state */
@@ -80,25 +94,24 @@
   background-color: #717171;
 }
 
-
-
     </style>
 </head>
 <body>
+<!-- <div class="container"> -->
     <div class="slideshow-container">
         <div class="slideshow-slide">
             <!-- First slide -->
-            <img src="slide1.jpg" alt="Image 1">
+            <center><img src="slide1.jpg" alt="Image 1"></center>
             <div class="slideshow-caption">Caption 1</div>
         </div>
         <div class="slideshow-slide">
             <!-- Second slide -->
-            <img src="slide2.jpg" alt="Image 2">
+            <center><img src="slide2.jpg" alt="Image 2"></center>
             <div class="slideshow-caption">Caption 2</div>
         </div>
         <div class="slideshow-slide">
             <!-- Second slide -->
-            <img src="slide3.jpg" alt="Image 2">
+            <center><img src="slide3.jpg" alt="Image 2"></center>
             <div class="slideshow-caption">Caption 2</div>
         </div>
         <!-- Add more slides here if desired -->
@@ -114,6 +127,9 @@
 
         <!-- Add more indicators here if desired -->
     </div>
+<!-- </div> -->
+
+
     <script>
         // JavaScript functions for controlling the slideshow go here
 // Set the initial display styles for the slides
