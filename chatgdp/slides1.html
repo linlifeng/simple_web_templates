@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+        /* CSS styles for slideshow and its elements go here */
+/* slideshow container */
+.slideshow-container {
+    display: block;
+  max-width: 100%;
+  /* position: relative; */
+  margin: auto;
+}
+
+/* hide the images by default */
+.slideshow-slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index: 1;
+  overflow: hidden;
+}
+.slideshow-slide center{
+    /* width: 100%; */
+    height: 90%;
+    margin: auto;
+}
+.slideshow-caption{
+    height: 9%;
+}
+/* next and previous buttons */
+.slideshow-prev, .slideshow-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #bbb;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  z-index: 10;
+}
+
+/* position the "next button" to the right */
+.slideshow-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add a black background color with a little bit see-through */
+.slideshow-prev:hover, .slideshow-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* the indicator container */
+.slideshow-indicators {
+  text-align: center;
+  background-color: #ddd;
+  line-height: 15px;
+  color: #000;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* hover state */
+.slideshow-indicators:hover {
+  background-color: #bbb;
+}
+
+/* the indicators (bullets) */
+.slideshow-indicator {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #bbb;
+}
+.slide_content{
+  margin: 50px;
+}
+/* active state (black background) */
+.active {
+  background-color: #717171;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="subleft subcontent slideshow-slide">
+      <div class="slide_content">
+      <h2>Synteny and Collinearity Search Tool</h2>
+      <p>The script was called MC-Scan, developed by my friend and colleague Haibao Tang. I was only a very small part of the development, but it is the first real bioinformatics project that lead me into the realm. This script is based on Collinear-Scan that scans large and complex plant genomes for collinear segments. The brilliance of this package is its ability to scan for one-to-many segment relationships between two genomes, making it extremely powerful in detecting ancient paralogous sequences and catching paleopolyploidy. In fact, it independently caught the Arabidopsis alpha genome triplication event before the grape genome was published. The previous sentence may not make much sense to many, but if you are in the field, you know it's a big deal.</p>
+      </div>
+  </div>
+  <div class="subright subcontent slideshow-slide">
+    <div class="slide_content">
+      <h2>Species-specific gene identification pipeline</h2>
+      <p>This is a collection of interconnected python scripts. The purpose of the pipeline is the identify the best genomic regions that distinguishes two groups of species by scanning through all segments of their genomes. The segments or genes that are conserved within each group of organisms but differ appreciably between the two groups of organisms are deemed desirable. The pipeline evaluates the usefulness of each segment.</p>
+    </div>
+  </div>
+  <div class="subleft subcontent slideshow-slide">
+    <div class="slide_content">
+      <h2>Sequencing result identification pipeline</h2> 
+      <p>This is a web tool developed using PHP, Python and MySql. The basic functionality is similar to NCBI web BLAST, but with many additional features such as user-provided database annotation file, tracking and archiving of input sequences, ability to auto-trim and convert ab1 files, read sample information from a tab file and automatic archiving of results into database.</p>
+      </div>
+  </div>
+  <div class="subright subcontent slideshow-slide">
+    <div class="slide_content">
+      <h2>Multiplexed Oligonucleotide Thermo-quality Filtering System</h2>
+      <p>This is essentially a system to design primers and probes. There are commonly used primer design tools since the beginning of days, many of which are quite robust and successful already, such as Primer3. However, none of them quite fits the specific requirements for our assays. Our team at Nanosphere developed an in-house script package that dynamically fits the needs of our different design requirements. It take into consideration specificity, inclusivity, thermo-dynamics, multiplexing compatibility in much detail, which ensured a high success rate in our oligo designs.</p>
+    </div> 
+  </div>
+  <div class="subleft subcontent slideshow-slide">
+    <div class="slide_content">
+      <h2>NanoDB: Nanosphere Biological Data Warehouse</h2>
+      <p>This is an on-going large project aimed to create a database driven platform that meets all the design and analysis needs in the company. It includes a database schema similar to that of GenBank, a web portal for lab access and data archiving, a collection of perl and python scripts that draws data from the database, execute analysis and archive results.</p>
+    </div>
+  </div>
+</div>
+
+<div class="slideshow-controls">
+  <a class="slideshow-prev" onclick="prevSlide()">&#10094;</a>
+  <a class="slideshow-next" onclick="nextSlide()">&#10095;</a>
+</div>
+<div class="slideshow-indicators">
+  <span class="slideshow-indicator" onclick="currentSlide(1)"></span>
+  <span class="slideshow-indicator" onclick="currentSlide(2)"></span>
+  <span class="slideshow-indicator" onclick="currentSlide(3)"></span>
+  <span class="slideshow-indicator" onclick="currentSlide(4)"></span>
+  <span class="slideshow-indicator" onclick="currentSlide(5)"></span>
+  <!-- Add more indicators here if desired -->
+</div>
+
+
+    <script>
+        // JavaScript functions for controlling the slideshow go here
+// Set the initial display styles for the slides
+var slides = document.querySelectorAll(".slideshow-slide");
+var indicators = document.querySelectorAll(".slideshow-indicator");
+for (var i = 0; i < slides.length; i++) {
+  //slides[i].style.display = "none";
+  slides[i].style.opacity = 0;
+  slides[i].style.transition = "opacity 1s ease-in-out";
+}
+  slides[0].style.opacity = 1;
+
+// Set the initial slide index to 0 (the first slide)
+var slideIndex = 0;
+
+// Show the first slide
+slides[slideIndex].style.display = "block";
+
+// Define a function to advance the slide show to the next slide
+function nextSlide() {
+  // Hide the current slide
+  slides[slideIndex].style.opacity = 0;
+  indicators[slideIndex].style.backgroundColor = "#bbb";
+
+  // Increment the slide index
+  slideIndex++;
+
+  // If the slide index is greater than the total number of slides, reset it to 0
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+
+  // Show the next slide
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex].style.opacity = 1;
+  indicators[slideIndex].style.backgroundColor = "black";
+
+}
+
+// Define a function to move the slide show to the previous slide
+function prevSlide() {
+  // Hide the current slide
+  slides[slideIndex].style.opacity = 0;
+  indicators[slideIndex].style.backgroundColor = "#bbb";
+
+  // Decrement the slide index
+  slideIndex--;
+
+  // If the slide index is less than 0, set it to the last slide in the slide show
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  // Show the previous slide
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex].style.opacity = 1;
+  indicators[slideIndex].style.backgroundColor = "black";
+}
+
+// Define a function to start the slide show
+function startSlideshow() {
+  // Set the interval to call the "nextSlide" function every 5 seconds
+  setInterval(nextSlide, 5000);
+}
+
+// Start the slide show
+// startSlideshow();
+
+
+
+
+    </script>
+</body>
+</html>
+
