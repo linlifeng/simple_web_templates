@@ -2,7 +2,7 @@
 <link href="css.css" rel="stylesheet" type="text/css">
 <div id="app">
 
-	<logo logo_image="https://assets-global.website-files.com/614716f50b4f49202fdd0087/616e745e89bb6e582031da82_pasted-image-0-20.png"></logo>
+	<logo logo_image="logo.png"></logo>
 	<div id="nav_button_box">
 		<!-- <transition name="fade"> -->
 		<navigation_button display_text="Home" target_element_id="home" name="home" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
@@ -10,11 +10,11 @@
 		<!-- <transition name="fade"> -->
 		<navigation_button display_text="Projects" target_element_id="projects" name="projects" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
 		<!-- </transition> -->
-		<!-- <transition name="fade"> -->
+		<transition name="fade">
 		<navigation_button display_text="About" target_element_id="about" name="about" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
-		<!-- </transition> -->
+		</transition>
 		<!-- <transition name="fade"> -->
-		<navigation_button display_text="Resume" target_element_id="resume" name="resume" @update_current_section="update_current_section" :current_section="current_section"></navigation_button>
+		<!-- <navigation_button display_text="Resume" target_element_id="resume" name="resume" @update_current_section="update_current_section" :current_section="current_section"></navigation_button> -->
 		<!-- </transition> -->
 
 	</div>
@@ -35,7 +35,7 @@
 		<live_background :current_section="current_section" linked_content="projects" image_url="./assets/bg2.jpg"></live_background>
 	</transition>
 	<transition name="slide-fade">
-		<content :current_section="current_section" title="projects" content_file_path="./section_pages/projects.html"></content>
+		<content :current_section="current_section" title="projects" content_file_path="./section_pages/projects.html" style="width:100%; left:2%; height:75%"></content>
 	</transition>
 
 
@@ -43,16 +43,16 @@
 		<live_background :current_section="current_section" linked_content="about" image_url="./assets/bg3.jpg"></live_background>
 	</transition>
 	<transition name="slide-fade">
-		<content :current_section="current_section" title="about" content_file_path="./section_pages/about.html"></content>
+		<content :current_section="current_section" title="about" content_file_path="./section_pages/about.html" style="height: 75%;"></content>
 	</transition>
 
 
-	<transition name="fade">
+	<!-- <transition name="fade">
 		<live_background :current_section="current_section" linked_content="resume" image_url="./assets/bg5.jpg"></live_background>
 	</transition>
 	<transition name="slide-fade">
 		<content :current_section="current_section" title="resume" content_file_path="./section_pages/resume.html"></content>
-	</transition>
+	</transition> -->
 
 </div> <!-- end app section -->
 

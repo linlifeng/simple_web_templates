@@ -3,13 +3,14 @@
     top: 10%;
     left: 10%;
     display: block;
-    height: 100px;
+    height: 75px;
+    padding: 0px
 }
 
 #nav_button_box {
     position: fixed;
     top: 15%;
-    left: 15%;
+    left: 17%;
     display: block;
 }
 
@@ -36,6 +37,7 @@
     touch-action: manipulation;
     margin: 15px;
     opacity: 0.8;
+    transition: 0.5s;
 }
 .active_menu_button{
     /* background-color: rgba(251, 251, 251, 0.5); */
@@ -64,7 +66,7 @@ p{
 }
 
 .content_box {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #eeeeee;
     padding: 0px;
     margin: 0px;
