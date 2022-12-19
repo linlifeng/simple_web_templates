@@ -2,10 +2,8 @@
 <style>
     .content{
         color: white;
-        padding: 2% 2%;
+        padding: 20px 20px;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .content{
         text-align: left;
     }
     .round_section_preview{
@@ -20,11 +18,28 @@
         backdrop-filter: blur(15px);
         box-shadow:3px 3px 25px 2px  black;
         transition: 0.5s;
-
+        position: fixed;
     }
     .round_section_preview:hover{
         box-shadow:3px 3px 25px 2px  wheat;
         transition: 0.5s;
+        border-radius: 20px;
+        height: 80%;
+        width: 80%;
+        left: 20px;
+        z-index: 10;
+    }
+    #gallerypalbutton{
+        left: 340px;
+    }
+    #gallerypalbutton:hover{
+        left: 20px;
+    }
+    #neptunebutton{
+        left: 660px;
+    }
+    #neptunebutton:hover{
+        left: 20px;
     }
     img {
         object-fit: cover;
@@ -36,9 +51,9 @@
             <h1>Hi, </h1>
             <p>My name is Vivi, I'm a UX/UI designer. I like designing accessible and impactful products for all and am always seeking creative ways to make live easier. </p>
         </div>
-        <img src="./images/foodiee.png" class="round_section_preview"/>
-        <img src="./images/gallerypal.png" class="round_section_preview"/>
-        <img src="./images/neptune.png" class="round_section_preview"/>
+        <img src="./images/foodiee.png" class="round_section_preview" style="left:20px"/>
+        <img src="./images/gallerypal.png" class="round_section_preview" id="gallerypalbutton"/>
+        <img src="./images/neptune.png" class="round_section_preview" id="neptunebutton"/>
 
     </div>
     
