@@ -67,7 +67,7 @@ z-index:100;
 #namelogo{
 color: grey;
 cursor:pointer;
-font-size: 5vw;
+font-size: 5vh;
 }
 .menu, .prevSegButton, .nextSegButton{
 display:inline-block;
@@ -83,7 +83,7 @@ color:#aaa;
     text-shadow: 5px 5px 5px #333;
 }
 .prevSegButton, .nextSegButton{
-    font-size:3vh;
+    font-size:2.5vh;
 }
 #namecard{
 	height:100%;
@@ -96,7 +96,7 @@ color:#aaa;
     left: 0%;
     bottom:0%;
     padding:0% 5% 0% 5%;
-    font-size: 2vw;
+    font-size: 2.5vh;
     color: rgba(5,5,5,.8);
     background:rgba(255,255,255,.3);
 }
@@ -108,7 +108,7 @@ color:#aaa;
     width:100%;
     overflow: auto;
     color: white;
-    font-size:1.5vw;
+    font-size:2.5vh;
     text-align:center;    
     font-family: Poiret One; 
     z-index: 99;
@@ -141,7 +141,7 @@ color:#aaa;
     color: #efefef;
     position:relative;
     font-family: Poiret One;
-    font-size:1.5vw;
+    font-size:2vh;
 }
 .content p{
 	padding:0 6% 6% 30%;
@@ -164,7 +164,7 @@ color:#aaa;
 .subcontent p{
     padding: 0% 5% 6% 5%;
     position: relative;
-    font-size: 1.5vw;
+    font-size: 2.5vh;
 }
 
 .subright h2{
@@ -193,7 +193,7 @@ th{
 .subcontent td{
     width:50%;
     color:white;
-    font-size: 1.5vw;
+    font-size: 1.5vh;
 }
 
 #educationintron{
@@ -293,6 +293,9 @@ th{
 	margin:0;
     padding:0;
 }
+#bioinfo .content{
+	font-size: 2vh;
+}
 #virus{
     background: url(./images/virus.jpg) no-repeat center center fixed;
     -webkit-background-size: cover; /* For WebKit*/
@@ -342,7 +345,7 @@ $(document).ready(function(){
     
     $('#menuicon').click(
         function(){
-            $("#menudiv").fadeIn();
+            $("#menudiv").fadeIn().animate({'width': menuwidth},0);
             $("html").animate({'right': menuwidth},0);
             
             //$('.exon').animate({opacity: 1},500);
