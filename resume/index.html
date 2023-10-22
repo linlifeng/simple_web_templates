@@ -24,7 +24,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-    body{
+body{
     background: url(./images/blur.jpg) no-repeat center center fixed;
     -webkit-background-size: cover; /* For WebKit*/
     -moz-background-size: cover;    /* Mozilla*/
@@ -40,7 +40,7 @@
 a{
     color:white;
 }
-#menuicon  img{
+#menuicon img{
     position:fixed;
     right:0px;
     top: 0px;
@@ -62,7 +62,7 @@ padding:5% 2% 0% 2%;
 box-shadow: 0px -15px 50px #000;
 font-family: Poiret One;
 background: rgba(255,255,255,0.8);
-z-index:100;
+z-index:99;
 }
 #namelogo{
 color: grey;
@@ -70,13 +70,11 @@ cursor:pointer;
 font-size: 5vh;
 }
 .menu, .prevSegButton, .nextSegButton{
-display:inline-block;
-
-font-size:4vh;
-margin-bottom:1.5vh;
-cursor:pointer;
-color:#aaa;
-
+    display:inline-block;
+    font-size:4vh;
+    margin-bottom:1.5vh;
+    cursor:pointer;
+    color:#aaa;
 }
 .menu:hover{
     color:inherit;
@@ -84,6 +82,13 @@ color:#aaa;
 }
 .prevSegButton, .nextSegButton{
     font-size:2.5vh;
+    position: absolute;
+    bottom: 0px;
+    color: red;
+    right: 0px;
+}
+.prevSegButton{
+    left:0px;
 }
 #namecard{
 	height:100%;
@@ -111,7 +116,7 @@ color:#aaa;
     font-size:2.5vh;
     text-align:center;    
     font-family: Poiret One; 
-    z-index: 99;
+    z-index: 90;
 }
 .intron, .exon{
   float:left;
@@ -345,10 +350,13 @@ $(document).ready(function(){
     
     $('#menuicon').click(
         function(){
-            $("#menudiv").fadeIn().animate({'width': menuwidth},0);
-            $("html").animate({'right': menuwidth},0);
-            
-            //$('.exon').animate({opacity: 1},500);
+            $("#menudiv").toggle(
+                function(){
+                    $(this).animate({'width': menuwidth},0);
+                }
+            );
+            // $("#menudiv").fadeIn().animate({'width': menuwidth},0);
+            // $("html").animate({'right': menuwidth},0);
         });
     $('.menu,#namelogo').click(
         function(){
@@ -417,7 +425,10 @@ $(document).ready(function(){
         $("#contact").fadeIn();
         $('.exon').animate({opacity: 0},500);
     });
-    
+    $('#contact').click(function(){
+        $("#contact").fadeOut();
+        $('.exon').animate({opacity: 1},500);
+    });
     
     $('.subcontent').click(function(){
         $(this).animate({'width': '88%', 'left':'2%'});
@@ -428,52 +439,46 @@ $(document).ready(function(){
     });
     
     $('.nextSegButton').click(function(){
-        //var eid = this.id;
-        //var prevId = $(this).parents(".section").prev().prev()[0].id;
         var nextId = '#'+$(this).parents(".section").next().next().children()[0].id;
         $("html,body").animate({scrollTop: $(nextId).offset().top},1000);
-        //alert(eid);
-        //alert(nextId);
     });
     $('.prevSegButton').click(function(){
-        //var eid = this.id;
         var prevId = '#'+$(this).parents(".section").prev().prev().children()[0].id;
-        //var nextId = $(this).parents(".section").next().next()[0].id;
         $("html,body").animate({scrollTop: $(prevId).offset().top},1000);
-        //alert(eid);
-       // alert(prevId);
     });
 
 });
 </script>
 
+
 <html style="position: relative; transition: right 0.25s ease-in-out 0s; right: 0px;">
 <head>
-    <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poiret+One">-->
     <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" media="screen and (max-device-width: 799px)"  href="./css/resume1_mobile.css" /> -->
-    <!--<link rel='stylesheet' media='screen and (min-width: 701px) and (max-width: 900px)' href='css/medium.css' />-->
 </head>
-    <body>
-        <div id="menuicon"><img src="./images/menu_icon.png"></div>
-        <div id="menudiv">
-            <span id="namelogo">Lifeng Lin</span>
-            </br>
-            <span class ="menu" id="bioinfomenu">Bioinformatics</span><br/>
-            <span class ="menu" id="assaydevmenu">Assay Development</span><br/>
-                <!--<span class ="menu" id="assaymenu">--Products<br/></span>
-                <span class ="menu" id="dutymenu">--Team Role<br/></span>
-                <span class ="menu" id="impactmenu">--Impact<br/></span>-->             
-            <span class ="menu" id="genomemenu">Genome Research</span><br/>
-                <!--<span class ="menu" id="projectmenu">--Projects<br/></span>
-                <span class ="menu" id="publicationmenu">--Publications<br/></span>-->
-            <span class ="menu" id="teachingmenu">Teaching</span><br/>
+
+<body>
+    <!-- navigation side panel -->
+    <div id="menuicon"><img src="./images/menu_icon.png"></div>
+    <div id="menudiv">
+        <span id="namelogo">Lifeng Lin</span>
+        </br>
+        <span class ="menu" id="bioinfomenu">Bioinformatics</span><br/>
+        <span class ="menu" id="assaydevmenu">Assay Development</span><br/>
+            <!--<span class ="menu" id="assaymenu">--Products<br/></span>
+            <span class ="menu" id="dutymenu">--Team Role<br/></span>
+            <span class ="menu" id="impactmenu">--Impact<br/></span>-->             
+        <span class ="menu" id="genomemenu">Genome Research</span><br/>
+            <!--<span class ="menu" id="projectmenu">--Projects<br/></span>
+            <span class ="menu" id="publicationmenu">--Publications<br/></span>-->
+        <span class ="menu" id="teachingmenu">Teaching</span><br/>
 
 
-            <span class ="menu" id="timelinemenu">TimeLine</span><br/>
-            <span class ="menu" id="contactmenu">Resume & Contact</span>
-        </div>
-        
+        <span class ="menu" id="timelinemenu">TimeLine</span><br/>
+        <span class ="menu" id="contactmenu">Resume & Contact</span>
+    </div>
+    <!-- end navigation side panel -->
+
+    <!-- cover-page section -->
     <div class="exon" id="namecard">
         <div id ="statement">
             <h1>"Who are you?"</h1>
@@ -484,7 +489,7 @@ $(document).ready(function(){
             <p>
             This is an old version of my blatant self-promoting site. 
             </br>
-            I have created this as an online resume single-pager template. I like the simplicity of static single pager sites and created this as a fun project. The content is grossly out-dated.
+            I have created this as a online resume single-pager template. I like the simplicity of static single pager sites and created this as a fun project back in 2015. The content is grossly out-dated.
             </p>
             <h1>"Where do I start?"</h1>
             <p>
@@ -492,10 +497,15 @@ $(document).ready(function(){
             </p>
         </div>
     </div>    
-    
+    <!-- end cover page  -->
+
     <div class="intron">
     </div>
+
+
+    <!-- large section 1 -->
     <div class="section" id ="bioinfoSec">
+        <!-- section overview -->
         <div class="exon overview" id="bioinfo">
             <div class="content" >
                 <h1>Bioinformatics</h1>
@@ -503,44 +513,19 @@ $(document).ready(function(){
                 <br/>I was originally trained as a geneticist, working on gene cloning and genetic mapping. Programming became a larger part of my works as the data accumulated to an extend that it became humanly impossible to analyse. After much training and experience with large biological datasets, I started to refer to myself as a "Bioinformatician" occasionally.<br/><br/>
                 
                 <span class="prevSegButton">Previous Section </span>
-                <!--<span class ="menu" id="bioinfoskillsmenu">| Skill Set |</span>-->
                 <span class ="menu" id="bioinfoprojectsmenu">| List of Projects | </span>
                 <span  class="nextSegButton">Next Section</span>
             </div>
         </div>
-        
-        <div class="intron">
-        </div>
-        
-        
-        <!--<div class="exon" id="bioinfoskills">
-            <div class="content" >
-                <h1>Bioinformatics Tool Shed</h1>
-                <!--<span>The nature of bioinformatics tasks are very similar to any technical worker: find clever ways of using existing tools to solve new problems. You can tell a lot about a electrician by looking into his toolbox. Therefore, I think the fast and easiest way of understanding what a bioinformatics scientist does and specializes in, is by looking at the software packages that he/she is familiar with.</span>-->
-                <!--
-                <h3>Scripting Languages</h3>
-                <p>By order of familiarity: Python, PHP, Javascript, MySQL, Perl</p>
-                <h3>Software Packages Used in the Past</h3>
-                <p><strong>General purpose: </strong>BLAST(duh.), Biopython, Pandas, numpy, scipy, 
-                <br/><strong>Alignment-related: </strong>MAFFT, MUSCLE, ClustalW, Kalign, MEGA4, TreeView, Phylip, 
-                <br/><strong>Sequencing and assembly: </strong>PhredPhrap, CAP3,
-                <br/><strong>Database-related: </strong>MySql, Toad, MySQL-Workbench, JMP, 
-                <br/><strong>All-encompassing bundles: </strong>BioEdit, Sequencher, Geneious,
-                <br/><strong>NGS processing</strong> Galaxy, FASTQC, BWA, Sickle, Scythe, SamTools, Velvet,  
-                <br/><strong>Other: </strong>FPC(FingerPrinted-Contigs, Physical map builder), MapMaker(Genetic map builder), BLAST2GO(Gene Ontology Predictor), FGENESH(Gene prediction tool), RasMol(Molecular structure visualization tool), Primer3(primer designer)</p>-->
-                <!--<h3>File extension Matrix</h3>
-                <p>.fasta(duh.), .gb, .blo, .ab1, .qual, .fastq, .sam, .bam, .sql, .dmp, .jmp, .pdb </p>
-                
-            </div>
-        </div>-->
+        <!-- end section overview -->
 
         <div class="intron">
         </div>
         
-        <div class="exon" id="bioinfoprojects" style="display:">
+        <!-- section detail page 1 -->
+        <div class="exon" id="bioinfoprojects">
             <div class="content" >
                 <h1>Bioinformatics Projects</h1>
-                <p>All scripts that I developed are by contract proprietary to my employer, and therefore I cannot share any of the codes here. My apologies.</p>
                 <div class="subleft subcontent">
                     <h2>Synteny and Collinearity Search Tool</h2>
                     <p>The script was called MC-Scan, developed by my friend and colleague Haibao Tang. I was only a very small part of the development, but it is the first real bioinformatics project that lead me into the realm. This script is based on Collinear-Scan that scans large and complex plant genomes for collinear segments. The brilliance of this package is its ability to scan for one-to-many segment relationships between two genomes, making it extremely powerful in detecting ancient paralogous sequences and catching paleopolyploidy. In fact, it independently caught the Arabidopsis alpha genome triplication event before the grape genome was published. The previous sentence may not make much sense to many, but if you are in the field, you know it's a big deal.</p>
@@ -549,6 +534,17 @@ $(document).ready(function(){
                     <h2>Species-specific gene identification pipeline</h2>
                     <p>This is a collection of interconnected python scripts. The purpose of the pipeline is the identify the best genomic regions that distinguishes two groups of species by scanning through all segments of their genomes. The segments or genes that are conserved within each group of organisms but differ appreciably between the two groups of organisms are deemed desirable. The pipeline evaluates the usefulness of each segment.</p>
                 </div>
+            </div>
+        </div>
+        <!-- end section detail page 1 -->
+
+        <div class="intron">
+        </div>
+
+        <!-- section detail page 2 -->
+        <div class="exon" id="bioinfoprojects">
+            <div class="content" >
+                <h1>Bioinformatics Projects continued</h1>
                 <div class="subleft subcontent">
                     <h2>Sequencing result identification pipeline</h2> 
                     <p>This is a web tool developed using PHP, Python and MySql. The basic functionality is similar to NCBI web BLAST, but with many additional features such as user-provided database annotation file, tracking and archiving of input sequences, ability to auto-trim and convert ab1 files, read sample information from a tab file and automatic archiving of results into database.</p>
@@ -563,12 +559,14 @@ $(document).ready(function(){
                 </div>
             </div>
         </div>
+        <!-- end section detail page 2 -->
     </div> 
+    <!-- end large section 1 -->
     
-        
     <div class="intron">
     </div>
     
+    <!-- large section 2 -->
     <div class="section" id ="assaydevSec">
         <div class="exon overview" id="verigene">
             <div class="content" >
@@ -635,12 +633,12 @@ $(document).ready(function(){
         </div>
         
     </div>
-    
+    <!-- end large section 2 -->
         
     <div class="intron">
     </div>
     
-    
+    <!-- large section 3 -->
     <div class='section' id ='genomeresSec'>
         <div class="exon overview" id="resprojects">
             <div class="content" >
@@ -727,102 +725,13 @@ $(document).ready(function(){
             </div>
         </div>
     </div>
+    <!-- end large section 3 -->
     
-    
-    
-	<div class="intron" id="labintron">
-	</div>
-    
-    <div class="section" id="teachingSec">
-        <div class="exon overview" id="teaching">
-            <div class="content" >
-                <h1>Teaching</h1>
-                <br>Since as far as I can remember, I have always enjoyed the process of explaining concepts in a close-to-life fashion. It brings me great satisfaction in convincing people of ideas and theories. It is for this reason that after college, I have successfully applied for a high-school teaching position while preparing for graduate school. Unfortunately the timing did not quite work out for me to enjoy teaching at that time, but the idea never faded away.<br/><br/>
-                My first teaching experience came in 2006, when I was charged to lead six classes of undergraduate students through their lab courses. During the two semesters, I have delivered lab lectures, designed and improved syllabi, designed and given dozens of quizzes and enjoyed every moment of the process.<br/><br/>
-                <span  class="prevSegButton">Previous section</span>
-                <span  class="menu" id="teachingfeedbackmenu">| Student Feedbacks</span>
-            </div> <!-- end content-->
-        </div> <!-- end teaching-->
-        <div class="intron">
-        </div>
-        <!-- under construction
-        <div class="exon" id="teachingTasks">
-            <div class="content">
-                <h2>Responsibilities</h2>
-                <div class="subleft subcontent">
-                    <h2>Lab Lectures</h2>
-                    <p><table>
-                    
-                    <td> </td>
-                    <td> </td>
-                    
-                    </table></p>
-                </div>
-                <div class="subright subcontent">
-                    <h2>Syllabi and Quizzes</h2>
-                </div>
-                <div class="subleft subcontent">
-                    <h2>Novel Ideas and Philosophy</h2>
-                </div>
-            </div>
-        </div>
-        <div class="intron">
-        </div>
-        -->
-        <div class="exon" id="teachingfeedback">
-            <div class="content">
-                <h2>Students (anonymous) Feedbacks</h2>
-                <br/>“It is hard having a timed quiz because there are so many analytical questions. Also, the quiz material was not always specified the week before so I think a study guide or vocab list would be helpful to guide students as to what to expect. <strong>Phil always answered every question, he was so helpful and patient.</strong>”<br/>
-                <hr/>
-                <br/>“Phill was very helpful and did everything he could to help us understand the topics”
-
-                <hr/>
-                <br/>“Very helpful and very understanding”
-
-                <hr/>
-                <br/>“Phill is awesome!!! He was my favorite teacher this semester.”
-
-                <hr/>
-                <br>“Phill (Lifeng Lin) has been an awesome teacher and he has really made my biology lab enjoyable. He is easy to talk to and always teaches on-level, pertinent information. Phill is funny, but at the same time takes his class seriously. <strong>He is by far the best lab teacher I could have asked for</strong>. PHILL RULES!!”<br/>
-
-                <hr/>
-                <br/>“A+”
-                <hr>
-                <br>“Lifeng was an awesome teacher! He kept us interested in the subjects. I don't think anyone in my lab was a Biology major, so <strong>he made it fun for us to learn about something that we didn't necessarily need to learn</strong>. And he made us laugh a lot; something key to having fun in a class.”<br/>
-            </div>
-        </div>
-    </div> <!--end teachingSec-->
-        <div class="intron">
-        </div>
-    
-
-    
-    <div class="intron">
-    </div>
-    
-
-<!--	
-	<div class="intron" id="reference">
-		<h1>Reference contacts</h1>
-		<div class="subleft subcontent">
-		<b>Feng Sun</b></br>
-		Associate Director, Bioinformatics</br>
-		Nanosphere Inc.</br>
-		fsun@nanosphere.us
-		</div>
-		<div class="subright subcontent">
-		<b>Dr. Andrew H Paterson</b></br>
-		PhD advisor</br>
-		Distinguished Professor, Plant Biology Department, University of Georgia</br>
-		paterson@plantbio.uga.edu
-		</div>
-	</div>
--->
-
-	<div class="intron" id="educationintron">
+	<div class="intron">
 	</div>
     
     
+    <!-- end cover -->
 	<div class="exon" id="timeline">
 		<div class="content">
         <h1>Timeline</h1>
@@ -849,9 +758,10 @@ $(document).ready(function(){
         -->
 		</div>
 	</div>
-    
-	<div class="intron" id="contact">
+    <!-- end endcover -->
 
+    <!-- hidden message section -->
+	<div id="contact">
 		<h1>Education</h1>
 		<p><b>Ph.D.</b> 2010</br>
 		University of Georgia</br>
@@ -876,7 +786,7 @@ $(document).ready(function(){
         
         <!--<span style="display: inline-block; position:absolute; bottom: 0px; color:#eee; word-wrap: break-word; word-break: break-all">BioinformaticsScientist@gmail.com</span>-->
 	</div>
-
+    <!-- end hidden message section -->
 
 </body>
 </html>
