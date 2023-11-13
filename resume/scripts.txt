@@ -7,19 +7,24 @@ main page
 	And who are you?
 		I am a veteran bioinformatics analyst, programmer in the field of nucleic acid assay development.
 	Why should I listen to you?
-		You shouldn't listen to anyone 100%. This meant only to provide a perspective from an insider.
+		You shouldn't. One shouldn't listen to anyone 100%. This is meant to provide one single perspective from an insider.
 
 
 section1 Overview
-	Bioinformatics is an intersection between biological sciences and computer sciences. That is not saying much, as both biological sciences and computer sciences are large complex fields, and saying that a new filed contains both is blurry at best and confusing at worst.
+	what is bioinformatics
+	The most common definition of Bioinformatics is that it's an intersection between biological sciences and computer sciences. This, however, is blurry at best and most likely confusing, as both biological sciences and computer sciences are large complex fields in and of themselves. 
 	
-	With few exceptions, the bio part of bioinformatics deals with genomic sciences, and informatics/computer science part of bionformatics deals with string processing on a large scale. Intuitively, bioinformatics only comes into existence when the size of biological datasets become unwieldy for conventional methods, which started with the mapping of the human genome, and later by the rising of sequencing technologies. (It is important to keep this in mind, as it is a key to understand the value of the bioinformatics function if you are an employer, and key to maintain your job security if you are a scientist.) 
+	To understand this a little deeper, it is useful to think back to how bioinformatics came into existence: when the size of biological datasets become unwieldy for conventional methods, which started with the mapping of the human genome, and later by the rising of sequencing technologies. (It is important to keep this in mind, as it is a key to understand the value of the bioinformatics function if you are an employer, and key to maintain your job security if you are a scientist.) Therefore, with few exceptions, the bio part of bioinformatics deals with genomic sciences, and informatics/computer science part deals with string processing on a large scale - the automation around it, and the algorithm behind it. Although some may not want to admit it, bioinformatics can be seen as an 'unwilling concede' of part of biological R&D functions to computer science due to the increasing complexity of dataset.   
 	
+	who's hiring?
+
+	
+	who's looking?
 	The three branches of bioinformatics functions
 	Skipping the historical roles bioinformatics has played, let's focus on today: what bioinformatics functions do in diagnostic companies, and why companies spend that much money to hire these people. In most companies, bioinformatics is an umbrella term that usually is composed of 3 "branches": 1. assay and oligonucleotide design; 2. assay data analysis and mining; and 3. biostatistics.   
 
 
-section2  Putting together an efficient team
+section2 Understanding the talent pool
 
 	The four quadrants of talent map.
 		Let's get a little cliche, and put our talent pool on two orthogonal scale and divide them into quadrants. On one scale, we have curiosity preferences, ranging from a pure genomic scientist interested in evolution or thermodynamics, to a pure computer scientist/mathematician aimed to 1000x the current speed of the calculations; On the other scale, we have personality preferences, ranging from internal-facing problem solvers, to customer facing field scientists. This would easily divide the talent pool into four categories?
@@ -27,12 +32,17 @@ section2  Putting together an efficient team
 			2
 			3
 			4
-			
+
 	an ideal candidate
 	So, how do you prepare yourself to become the candidate that every company would love to hire?
 
-
-section3
+section3 Understanding the development process
 	Are you doing research or are you putting out a product? If you are developing a product, what is your timeline and what is your current phase? Are you prototyping or are you ramping up production? These are important questions to ask before you put out an ad for a bioinformatics scientist. So many times have I experienced personally as well as heard stories about talented people being miserable in a team, only because the expectations are not matching due to the failure to understanding where things are. 
 
+	
 
+
+section4 Stories
+	It is dry talking about charts and numbers and categories and theories. I came to those points above through series of personal events and stories that I heard from others in the field. Maybe it is better that I tell those stories as it is, so people can come to their own conclusions. 
+
+	As mentioned in the very beginning, biological R&D is 'conceding' grounds to programmers, people most likely would see bioinformatics function as a tool to help, rather than a driving force of discovery. Traditional companies are usually dominated by research scientists with proper biological backgrounds, such as microbiology and oncology.
