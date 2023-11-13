@@ -1,0 +1,38 @@
+main page
+	What is this place?
+		I am sharing my understanding of bioinformatics Scientist as a career, and bioinformatics as a function in a diagnostic company, based on more than a decade of experience working in multiple companies in the field.
+		You can view this as a career guidebook if you are a new bioinformatics scientist in the diagnostic field.
+		You can view this as an introduction to the bioinformatics function if you are an entrepreneur trying to understand how things work technically.
+	
+	And who are you?
+		I am a veteran bioinformatics analyst, programmer in the field of nucleic acid assay development.
+	Why should I listen to you?
+		You shouldn't listen to anyone 100%. This meant only to provide a perspective from an insider.
+
+
+section1 Overview
+	Bioinformatics is an intersection between biological sciences and computer sciences. That is not saying much, as both biological sciences and computer sciences are large complex fields, and saying that a new filed contains both is blurry at best and confusing at worst.
+	
+	With few exceptions, the bio part of bioinformatics deals with genomic sciences, and informatics/computer science part of bionformatics deals with string processing on a large scale. Intuitively, bioinformatics only comes into existence when the size of biological datasets become unwieldy for conventional methods, which started with the mapping of the human genome, and later by the rising of sequencing technologies. (It is important to keep this in mind, as it is a key to understand the value of the bioinformatics function if you are an employer, and key to maintain your job security if you are a scientist.) 
+	
+	The three branches of bioinformatics functions
+	Skipping the historical roles bioinformatics has played, let's focus on today: what bioinformatics functions do in diagnostic companies, and why companies spend that much money to hire these people. In most companies, bioinformatics is an umbrella term that usually is composed of 3 "branches": 1. assay and oligonucleotide design; 2. assay data analysis and mining; and 3. biostatistics.   
+
+
+section2  Putting together an efficient team
+
+	The four quadrants of talent map.
+		Let's get a little cliche, and put our talent pool on two orthogonal scale and divide them into quadrants. On one scale, we have curiosity preferences, ranging from a pure genomic scientist interested in evolution or thermodynamics, to a pure computer scientist/mathematician aimed to 1000x the current speed of the calculations; On the other scale, we have personality preferences, ranging from internal-facing problem solvers, to customer facing field scientists. This would easily divide the talent pool into four categories?
+			1
+			2
+			3
+			4
+			
+	an ideal candidate
+	So, how do you prepare yourself to become the candidate that every company would love to hire?
+
+
+section3
+	Are you doing research or are you putting out a product? If you are developing a product, what is your timeline and what is your current phase? Are you prototyping or are you ramping up production? These are important questions to ask before you put out an ad for a bioinformatics scientist. So many times have I experienced personally as well as heard stories about talented people being miserable in a team, only because the expectations are not matching due to the failure to understanding where things are. 
+
+
