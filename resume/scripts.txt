@@ -1,30 +1,48 @@
 main page
 	What is this place?
-		I am sharing my understanding of bioinformatics Scientist as a career, and bioinformatics as a function in a diagnostic company, based on more than a decade of experience working in multiple companies in the field.
+		I am sharing my experience as a career bioinformatics Scientist, and my thoughts about bioinformatics as a function in a biotech company.
 		You can view this as a career guidebook if you are a new bioinformatics scientist in the diagnostic field.
 		You can view this as an introduction to the bioinformatics function if you are an entrepreneur trying to understand how things work technically.
-	
-	And who are you?
-		I am a veteran bioinformatics analyst, programmer in the field of nucleic acid assay development.
+
 	Why should I listen to you?
-		You shouldn't. One shouldn't listen to anyone 100%. This is meant to provide one single perspective from an insider.
+		You shouldn't. One shouldn't listen to anyone 100%. This is meant to provide one single perspective from an insider who has served in 5 companies across 13 years.
 
 
-section1 Overview
-	what is bioinformatics
+section1 Clear Definitions are important
+	What is bioinformatics
 	The most common definition of Bioinformatics is that it's an intersection between biological sciences and computer sciences. This, however, is blurry at best and most likely confusing, as both biological sciences and computer sciences are large complex fields in and of themselves. 
 	
-	To understand this a little deeper, it is useful to think back to how bioinformatics came into existence: when the size of biological datasets become unwieldy for conventional methods, which started with the mapping of the human genome, and later by the rising of sequencing technologies. (It is important to keep this in mind, as it is a key to understand the value of the bioinformatics function if you are an employer, and key to maintain your job security if you are a scientist.) Therefore, with few exceptions, the bio part of bioinformatics deals with genomic sciences, and informatics/computer science part deals with string processing on a large scale - the automation around it, and the algorithm behind it. Although some may not want to admit it, bioinformatics can be seen as an 'unwilling concede' of part of biological R&D functions to computer science due to the increasing complexity of dataset.   
+	To understand this a little deeper, it is useful to think back to how bioinformatics came into existence: when the size of biological datasets become unwieldy for conventional methods, which started with the mapping of the human genome, and later by the rising of sequencing technologies. (It is important to keep this in mind, as it is a key to understand the value of the bioinformatics function if you are an employer, and key to maintain your job security if you are a scientist.) Therefore, with few exceptions, the bio part of bioinformatics deals with genomic sciences, and informatics/computer science part deals with string processing on a large scale - the automation around it, and the algorithm behind it. 
 	
-	who's hiring?
+	People's view against Bioinformatics function largely dependent on their own functions and background. If you talk to a traditional biologist working in a lab, they may see bioinformatics as an 'unwilling concede' of part of biological R&D functions to computer science due to the increasing complexity of dataset. In other words, if lab scientist can get away with not using programmers, or can do simple coding themselves, many don't see the need for a bioinformatics function at all. If you come from a computer science background, or view coding and automation as your career choice, you will of course view bioinformatics as a driver toward new discovery and sometimes even pity those who do traditional lab work and call sorting Excel sheets "data mining". Howerver, whether we admit or not, this polarizing view of this field is present whereever you go, and is deeply rooted in your everyday interactions with other groups that it is worth mentioning in the beginning here.
 
+	Who are bioinformatics scientists? Who's hiring? What are the roles?
+	We've established that "bioinformatics scientist" is an umbrella term like "handyman", or "field worker" (one similar bad term that has been misused widely might be "data scientist"). So let's try to break it down into more meaningful groups, or "personas". When you see an ad for bioinformatics scientist, it is most likely one of these four types:
+	1. bio-data analyst
+	2. bio-algorithm Developers
+	3. bio-application Developers
+	4. NGS data processor
+
+
+	Knowing the meaning of bioinformatics existence is a first step to understanding which employers needs bioinformatics functions and why. 
+		Universities and Government Labs
+		Assay Developers
+			Thermo Fisher Scientific/Agilent
+			Illumina
+		Genome service providers
+			23andMe
+		Data analysis platform providers
+			Amazon/Apple
+			DNANexus
+ 
+
+
+section2 Zooming in the diagnostic industry
 	
 	who's looking?
-	The three branches of bioinformatics functions
-	Skipping the historical roles bioinformatics has played, let's focus on today: what bioinformatics functions do in diagnostic companies, and why companies spend that much money to hire these people. In most companies, bioinformatics is an umbrella term that usually is composed of 3 "branches": 1. assay and oligonucleotide design; 2. assay data analysis and mining; and 3. biostatistics.   
-
-
-section2 Understanding the talent pool
+		Molecular biologists with a passion for coding 
+		Computer scientists with a passion for making an impact 
+		Bioinformatics majors?
 
 	The four quadrants of talent map.
 		Let's get a little cliche, and put our talent pool on two orthogonal scale and divide them into quadrants. On one scale, we have curiosity preferences, ranging from a pure genomic scientist interested in evolution or thermodynamics, to a pure computer scientist/mathematician aimed to 1000x the current speed of the calculations; On the other scale, we have personality preferences, ranging from internal-facing problem solvers, to customer facing field scientists. This would easily divide the talent pool into four categories?
@@ -33,13 +51,18 @@ section2 Understanding the talent pool
 			3
 			4
 
-	an ideal candidate
-	So, how do you prepare yourself to become the candidate that every company would love to hire?
+	so how do they match up?
+		if we come from the point of view of a talent. If you are falling into quadrant 1, ....
+
+		from hiring perspective, the we can use these matching principles to craft the right JD.
+
 
 section3 Understanding the development process
+	Like in many industry, inferior products wins all the time; similarly, having the best talent under one roof doesn't mean you will get the best results. After years of observations, I have come to believe that the disconnect happens in the misunderstanding of where things are in the development process, which resulted in a mismatch of expectations between the management and the talent doing the job. The more competent the talent is, the more prominent this conflict could become. 
+
 	Are you doing research or are you putting out a product? If you are developing a product, what is your timeline and what is your current phase? Are you prototyping or are you ramping up production? These are important questions to ask before you put out an ad for a bioinformatics scientist. So many times have I experienced personally as well as heard stories about talented people being miserable in a team, only because the expectations are not matching due to the failure to understanding where things are. 
 
-	
+	The reality is, we only have a single group of talent to manage through all different phases of the product cycle. This is certainly manageable. We don't need different groups of bioinformatics scientist taking care of R&D vs production, but the process and timeline should be clearly communicated so that expectations is aligned. 
 
 
 section4 Stories
