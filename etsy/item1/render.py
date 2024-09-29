@@ -13,25 +13,26 @@ template = env.get_template('index.html')
 data = {
     'bg': './images/blur.jpg',
     'name': 'John Smith',
+    'contact':"test contact content",
     'sections': [
         {
             'id': 'section_1',
-            'title': 'section 1',
+            'title': 'Section 1',
             'bg': './images/coding_screen1_clear.jpg',
             'pages': [
                 {
-                    "title": "page1",
+                    "title": "Page 1 Title",
                     "content": "section 1 page1 content"
                 },
                 {
-                    "title": "page2",
+                    "title": "Page 2 Title",
                     "content": "section 1 page2 content"
                 },
             ] 
         },
         {
             'id': 'section_2',
-            "title": 'section 2',
+            "title": 'Section 2',
             'bg': "./images/research2_clear.jpg",
             'pages': [
                 {
