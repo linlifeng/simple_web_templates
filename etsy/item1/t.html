@@ -1,0 +1,468 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="functions.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css.css" />
+    <script>
+    $(document).ready(function(){        
+        
+            $('#section_1_menu').click(function(){
+                $("html,body").animate({scrollTop: $("#section_1 .exon .content").offset().top},1000);
+            });
+        
+            $('#section_2_menu').click(function(){
+                $("html,body").animate({scrollTop: $("#section_2 .exon .content").offset().top},1000);
+            });
+        
+    });
+    </script>
+    <style>
+        .intron, .exon{
+            float:left;
+            height:auto;
+            width:100%;
+            position:relative;
+        }
+        .exon{
+            box-shadow: 10px 0px 57px #000;
+            height: 100%;
+        }
+        .intron{
+            font-size:12;
+            height:150px;
+        }
+        .section .intron{
+            height: 50px;
+        }
+        .section .exon .content{
+            z-index: 2;
+            position: relative;
+        }
+        
+            #section_1 .intron{
+                background: url('./images/coding_screen1_clear.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+                margin:0;
+                padding:0;
+            }
+            #section_1 .exon .exon_bg{
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url('./images/coding_screen1_clear.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+                margin:0;
+                padding:0;
+                filter: blur(5px);
+                z-index: 1;
+                position: absolute;
+            }
+        
+            #section_2 .intron{
+                background: url('./images/research2_clear.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+                margin:0;
+                padding:0;
+            }
+            #section_2 .exon .exon_bg{
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url('./images/research2_clear.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+                margin:0;
+                padding:0;
+                filter: blur(5px);
+                z-index: 1;
+                position: absolute;
+            }
+        
+    </style>
+</head>
+<body style="background-image: url('./images/blur.jpg'); background-attachment: fixed; background-size: cover; height: 100vh; width: 100%;">
+    <div id="menuicon"><img src="./images/menu_icon.png"></div>
+    <div id="menudiv">
+        <span id="namelogo">John Smith</span>
+        </br>
+        
+        <span class ="menu" id="section_1_menu">section 1</span><br/>
+        
+        <span class ="menu" id="section_2_menu">section 2</span><br/>
+        
+    </div>
+        
+    <div class="exon" id="namecard">
+        <div id ="statement">
+            <h1>"Who are you?"</h1>
+            <p>
+            My name is John Smith and I am a Designer.
+            </p> 
+            <h1>"What is this place?"</h1>
+            <p>
+            This is my online resume. 
+            </br>
+            </p>
+            <h1>"Where do I start?"</h1>
+            <p>
+            Click the icon to the top-right corner or simply start scrolling. Enjoy!
+            </p>
+        </div>
+    </div>    
+    
+    <div class="intron">
+    </div>
+
+    
+    <div class="section" id="section_1">
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page1</h1>
+                section 1 page1 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page2</h1>
+                section 1 page2 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+    </div>
+    <div class="intron">
+    </div>
+    
+    <div class="section" id="section_2">
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page1</h1>
+                section 1 page1 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page2</h1>
+                section 1 page2 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+    </div>
+    <div class="intron">
+    </div>
+    
+
+    <div class="section" id="section1">
+        <div class="exon overview">
+            <div class="content" >
+                <h1>Bioinformatics</h1>
+                <br/>What is Bioinformatics? Over the past decade, this question has been asked by many, both from academia and from outsiders alike. The term is hard to define because it encompasses too wide a scope that the skill set and backgrounds differs greatly even among bioinformatics scientists. The confusion usually come from the misunderstanding of Bioinformatics as a branch of science, like chemistry, or botany, but in fact, it is not so much a science branch in that it does not directly answer any scientific questions, but only works to facilitate the answering of questions in other fields of Biology, such as genetics or biochemistry. In other words, Bioinformatics is a tool, very much like statistics. "Bioinformatics Scientists" should more appropriately be called Bioinformaticians.<br/>
+                <br/>I was originally trained as a geneticist, working on gene cloning and genetic mapping. Programming became a larger part of my works as the data accumulated to an extend that it became humanly impossible to analyse. After much training and experience with large biological datasets, I started to refer to myself as a "Bioinformatician" occasionally.<br/><br/>
+                
+                <span class="prevSegButton">Previous Section </span>
+                <!--<span class ="menu" id="bioinfoskillsmenu">| Skill Set |</span>-->
+                <span class ="menu" id="bioinfoprojectsmenu">| List of Projects | </span>
+                <span  class="nextSegButton">Next Section</span>
+            </div>
+        </div>
+        
+        <div class="intron"></div>
+        <div class="intron"></div>
+        <!-- multiple introns can be added the make the gap wider -->
+        
+        <div class="exon" id="bioinfoprojects">
+            <div class="content" >
+                <h1>Bioinformatics Projects</h1>
+                <p>All scripts that I developed are by contract proprietary to my employer, and therefore I cannot share any of the codes here. My apologies.</p>
+                <div class="subleft subcontent">
+                    <h2>Synteny and Collinearity Search Tool</h2>
+                    <p>The script was called MC-Scan, developed by my friend and colleague Haibao Tang. I was only a very small part of the development, but it is the first real bioinformatics project that lead me into the realm. This script is based on Collinear-Scan that scans large and complex plant genomes for collinear segments. The brilliance of this package is its ability to scan for one-to-many segment relationships between two genomes, making it extremely powerful in detecting ancient paralogous sequences and catching paleopolyploidy. In fact, it independently caught the Arabidopsis alpha genome triplication event before the grape genome was published. The previous sentence may not make much sense to many, but if you are in the field, you know it's a big deal.</p>
+                </div>
+                <div class="subright subcontent">
+                    <h2>Species-specific gene identification pipeline</h2>
+                    <p>This is a collection of interconnected python scripts. The purpose of the pipeline is the identify the best genomic regions that distinguishes two groups of species by scanning through all segments of their genomes. The segments or genes that are conserved within each group of organisms but differ appreciably between the two groups of organisms are deemed desirable. The pipeline evaluates the usefulness of each segment.</p>
+                </div>
+                <div class="subleft subcontent">
+                    <h2>Sequencing result identification pipeline</h2> 
+                    <p>This is a web tool developed using PHP, Python and MySql. The basic functionality is similar to NCBI web BLAST, but with many additional features such as user-provided database annotation file, tracking and archiving of input sequences, ability to auto-trim and convert ab1 files, read sample information from a tab file and automatic archiving of results into database.</p>
+                </div>
+                <div class="subright subcontent">
+                    <h2>Multiplexed Oligonucleotide Thermo-quality Filtering System</h2>
+                    <p>This is essentially a system to design primers and probes. There are commonly used primer design tools since the beginning of days, many of which are quite robust and successful already, such as Primer3. However, none of them quite fits the specific requirements for our assays. Our team at Nanosphere developed an in-house script package that dynamically fits the needs of our different design requirements. It take into consideration specificity, inclusivity, thermo-dynamics, multiplexing compatibility in much detail, which ensured a high success rate in our oligo designs.</p>
+                </div>
+                <div class="subleft subcontent">
+                    <h2>NanoDB: Nanosphere Biological Data Warehouse</h2>
+                    <p>This is an on-going large project aimed to create a database driven platform that meets all the design and analysis needs in the company. It includes a database schema similar to that of GenBank, a web portal for lab access and data archiving, a collection of perl and python scripts that draws data from the database, execute analysis and archive results.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="intron">
+    </div>
+    
+    <div class="section" id="assaydevSec">
+        <div class="exon overview" id="verigene">
+            <div class="content" >
+            <h1>Nucleic Acid Assay Development</h1>
+            <br>In 2010, I joined the team responsible for the in silico design of half-a-dozen highly-multiplexed, FDA-cleared, sample-to-result clinical assays for in vitro detection of micro-organisms. We believe this is the future of clinical molecular diagnostics and are very proud of the quality of our designs.<br/><br/>
+            <br>Next-generation sequencing (NGS) technology has already revolutionized the research field by providing fast, simple and accurate solutions to many of the difficult problems. However, the clinical market for NGS-based diagnostics is still largely untouched. As a continuation of my field of study, I moved on to design NGS-based assays since 2015.<br/><br/>
+            <span class="prevSegButton">Previous Section</span>
+            <span class ="menu" id="dutymenu">| Responsibilities |</span>
+            <span class ="menu" id="assaymenu">Products |</span>
+            <span  class="nextSegButton">Next Section</span>
+            </div>
+        </div>
+        
+        <div class="intron" id="virus">
+        </div>
+        
+        <div class="exon" id="teamrole">
+            <div class="content" >
+            <h1>Responsibilities</h1>
+            <p><strong>Job Description: </strong>To support and to continue the development and integration of diverse in-house bioinformatics and statistics tools for designing multiplex nucleic-acid-based IVD assays, including computational pipelines to aggregate/synchronize large genomic data sets from multiple sources,  internal nucleic acid sequence databases for comparative genomic analysis, pipeline for oligonucleotide probe designs, database and web tools for querying and evaluating oligonucleotide probes, and tools for automated assay data collection and analysis.</p>
+            <p><strong>In simpler phrases: </strong>Determine the best oligonuleotide sequences to be put on the product that satisfies the marketing needs; follow through the whole product development cycle and help to make sure they work as they should. At the same time, try to improve the work efficiency by developing new tools for both the bioinformatics team and the lab team as well.</p>
+            <!--
+            <div class="subleft subcontent">
+                <h2>Oligonucleotide Screening</h2>
+                <p>Our in silico design dictates what would eventually be placed in our products and used on patients worldwide. We ensure that our oligonucleotide probes report all organisms from a given species regardless of the high variations (inclusivity) and will not react to any other organisms that might get contaminated into the samples (specificity).</p>
+            </div>
+            <div class="subright subcontent">
+                <h2>Database and Web Portals</h2>
+                <p>Maintain an organized data system of all sequences from all organisms that we are interested in, and keep track of all proprietary oligonucleotides that we spent so much time and effort designing and screening.</p>
+            </div>
+            <div class="subleft subcontent">
+                <h2>Sequencing result processing</h2> 
+                <p>Our product development and clinical studies produce large amount of sequencing data of potentially unknown strains that require rapid and accurate identifications. A system is developed for automatic tracking, processing and archiving such data.</p>
+            </div>
+            <div class="subright subcontent">
+                <h2>Genome assembly and processing</h2>
+                <p>We are serious about meeting the needs of our customers. Therefore, when there are no adequate sequence resources for a potential important target, we spend the time and money to do our own de novo whole genome sequencing and assembly.</p>
+            </div>
+            -->
+            </div>
+        </div>
+        
+        
+        <div class="intron" id="virus">
+        </div>
+                
+        <div class="exon" id="products">
+            <div class="content">
+            <h1>Successfull commertializations (FDA clearance) and Publications</h1>
+            <h2>List of Assays</h2>
+            All the following panels are multiplexed sample-to-result assays.
+                <li><a target="blank" href="http://www.nanosphere.us/products/respiratory-virus-plus-test">RV+</a>: Respiratory Virus panel. Targes include Influenza A, Subtype H1, Subtype H3, 2009 H1N1, Influenza B, RSVA, RSVB and Tamiflu Resistance SNP. 
+                <li><a target="blank" href="http://www.nanosphere.us/products/respiratory-pathogens-flex-test">RP</a>: Respiratory Pathogen panel. Extended RV panel by adding Adenovirus, Rhinovirus, Metapneumovirus A and B, Parainfluenza Virus 1-4; as well as bacterial targets Bordetella pertussis and Bordetella holmesii.
+                <li><a target="blank" href="http://www.nanosphere.us/products/gram-positive-blood-culture-test">BC-GP</a>: Sepsis Direct Blood-Cuture detection of Gram-Positive Bacteria. This include detection of 4 genus level target, 9 species level target and 3 resistance marker genes.
+                <li><a target="blank" href="http://www.nanosphere.us/products/gram-negative-blood-culture-test">BC-GN</a>: Sepsis Direct Blood-Culture detection of Gram-Negative Bacteria. This include detection of 4 genus level target, 5 species level target and 6 resistance marker genes.
+                <li><a target="blank" href="http://www.nanosphere.us/products/yeast-blood-culture-test">BC-Y</a>: Sepsis Direct Blood-culture detection of Yeast targets.
+                <li><a target="blank" href="http://www.nanosphere.us/products/enteric-pathogens-test">EP</a>: Enteric Pathogens. This include the detection of 5 common bacterial targets and 2 virus targets. It also detects the two Shiga Toxin genes in STEC and Shigella.
+                <li><a target="blank" href="http://www.nanosphere.us/products/clostridium-difficile-test">Clostridium difficile</a>: A short panel aimed at the detection of Toxin A, B and hypervirulent marker in C. difficile strains from stool samples.
+             <h2>Conference Poster</h2>
+             <li>S. Marla, M. Dado, C. Gerstein, M. Hardy, C. Kranz, L. Lin, D. Mahr, D. Morrow, B. Llano-Sotelo, B. Werner, E. Yoritomi, S. Powell, F. Sun, J. Hollenstein
+    “Development of Nanosphere’s Verigene BC-GN Test for rapid detection of Gram-negative bacteria and resistance determinants directly from positive blood cultures” (2013)
+    23rd European Congress of Clinical Microbiology and Infectious Diseases</br>
+        </div>
+        </div>
+        
+    </div>
+    
+    <div class="intron">
+    </div>
+    
+    <div class='section' id='genomeresSec'>
+        <div class="exon overview" id="resprojects">
+            <div class="content" >
+                <h1>Cotton Genome Study</h1>
+                <br/>Plant Genome Laboratory at University of Georgia provided me with a once-in-a-lifetime opportunity to do research among some of the brightest minds that I have encountered so far. Genome sequencing was still not that advanced at the time and on top of that, plant genomes are strikingly more complicated than animal genomes such as that of human. Our research are very much exploratory and when lucky, ground-breaking.<br/>
+                <br/>I shifted my focus to microbial genomes and oligonucleotide research after getting my PhD and joining industry, but still maintained an interest in the field of cotton genomic research. I had collaborations with my former colleagues in my own time and continued to co-author publications on the subject.<br/>
+                
+                <!--<span  class="prevSegButton">Previous |</span>-->
+                <span class="prevSegButton">Previous Section</span>
+                <span class ="menu" id="projectmenu">| Projects |</span>
+                <span class ="menu" id="publicationmenu">Publications |</span>
+                <span  class="nextSegButton">Next Section</span>
+            </div>
+        </div>
+        <div class="intron" id="labintron">
+        </div>
+        <div class="exon" id="projects">
+            <div class="content" >
+                <h1>Past Research Projects</h1>
+                <div class="subleft subcontent">
+                    <h2>Comparative genomics of cotton</h2>
+                    <p><img src="./images/grape_compare.jpg"/></p>
+                    <p>In order to understand the evolution history of cotton genomes, we aim to use the sequenced grape genome to elucidate the number of whole genome duplication events that had happened in the cotton genomes and its possible impact on the modern cotton genome landscape. This information is useful in making meaningful comparisons between the cotton genome and other sequence resources. </p>                
+                </div>
+                <div class="subright subcontent">
+                    <h2>Fiberless Genes</h2>
+                    <p><img src="./images/fiberless_cotton.jpg"/></p>
+                    <p>The most important feature of cotton plants would be the length and quality of the fibre. To study the genetic basis of fibre development, the identification of underlying gene(s) is always a first step. The Lab maintain a collection of fiberless cotton mutants. I have spent several years developing mapping population and pin-pointing the gene that caused the phenotype by a method called "Chromosome-walking". A detailed map of the gene region was constructed by my research, but unfortunately I was not able to clone the gene by the time of my graduation.</p>
+                    
+                </div>
+                <div class="subleft subcontent">
+                    <h2>Physical map assembly</h2>
+                    <p>
+                        <table>
+                        <td>
+                        Physical mapping is the technique that pieces together small "clonable" fragments of the target genome into contiguous genomic scaffolds so that the whole genome can be represented by a collection of library inserts with known position and known sequence. This method is extremely useful in large and complex plant genomes where rampant whole genome duplication events and large transposon explosions often create bit troubles in whole genome sequencing attempts. The assembly of such genomes are a lot of times dependent upon the direction of a scaffold of physical map. With integrated genetic markers, this physical map can often be used in place of a complete genome.<br/>
+                        <br/>I am glad to say that even though the continuous breakthroughs of genome sequencing techniques may be gradually overshadowing the process of physical mapping, the work that I have done nonetheless helped in the later projects of cotton whole genome sequencing.<br/>
+                        </td>
+                        <td>
+                        <img src="./images/FPC_bands.jpg"/>
+                        </td>
+                        </table>
+                    </p>
+                    
+                </div>
+                <div class="subright subcontent">
+                    <h2>Genetic marker development</h2>
+                    <p>
+                    <!--
+                    <table>
+                    <td>
+                    <img src="./images/.jpg"/>
+                    </td>                    
+                    <td>-->
+                    Genetic markers are the life-blood of any genome maps. After all, if we compare a genome to a map, what good is a map without road signs? Like many of the work in cotton, the major obstacle of this project is the lack of sequencing resources and the complexity of the genome. With a huge amount of wet-lab testing and verifications, I was able to screen out molecular markers that target the gene locus despite a low success rate by nature. The markers that I designed at the time range from SSR, SSLP, to "ancient" types like RFLP. SNPs were tried, but not prevalent due to lack of sequences. 
+                    <!--</td>
+                    </table>-->
+                    </p>
+                </div>            
+            </div>
+        </div>    
+        
+        <div class="intron" id="labintron">
+        </div>
+        <div class="exon" id="publications">
+            <div class="content" >
+                <h1>Publications*</h1>
+                <li> Paterson, A. H., J. F. Wendel, et al. (2012). “Repeated polyploidization of Gossypium genomes and the evolution of spinnable cotton fibres.” Nature 492: 423-427.</br>
+                <li> Lin, L. and A. H. Paterson (2009). Physical composition and organization of the Gossypium genomes. Genetics and Genomics of Cotton. A. H. Paterson, Springer.</br>
+                <li> Lin, L. and A. H. Paterson (2011). “Size variation in homologous segments across divergent plant genomes.” Mob Genet Elements 1(2): 92-96.</br>
+                <li> Lin, L., G. J. Pierce, et al. (2010). “A draft physical map of a D-genome cotton species (Gossypium raimondii).” BMC Genomics 11: 395.</br>
+                <li> Lin, L., H. Tang, et al. (2011). “Comparative analysis of Gossypium and Vitis genomes indicates genome duplication specific to the Gossypium lineage.” Genomics 97(5): 313-320.</br>
+                <li> Ding, M., J. C., Y. Jiang., et al.(2014). "Genome-wide investigation and transcriptome analysis of the WRKY gene family in Gossypium." Mol Genet Genomics Sep. 5(Epub ahead of print)</br> 
+                <li> Ding, M., J. Y., C. Y. et al. (2014). "Gene expression profile analysis of Ligon lintless-1 (Li1) mutant reveals important genes and pathways in cotton leaf and fiber development." Gene 535(2):273-85</br>
+                <li> He, S., Y. Zheng et al. (2013). “Converting restriction fragment length polymorphism to single-strand conformation polymorphism markers and its application in the fine mapping of a trichome gene in cotton.” Plant Breeding 132(3): 337-343.</br>
+                <li> Paterson, A. H., J. E. Bowers, et al. (2009). “Comparative genomics of grasses promises a bountiful harvest.” Plant Physiol 149(1): 125-131.</br>
+                <li> Paterson, A. H., B. K. Mashope, L. Lin (2009). “The Comparative Genomics of Orphan Crops.” ATDF Journal (6(3,4)): 16-23.</br>
+                <li> Rong, J., F. A. Feltus, L. Lin, et al. (2010). “Gene copy number evolution during tetraploid cotton radiation.” Heredity (Edinb) 105(5): 463-472.</br>
+                <li> Wang, X., M. J. Torres, et al. (2011). “A physical map of Brassica oleracea shows complexity of chromosomal changes following recursive paleopolyploidizations.” BMC Genomics 12: 470.</br>
+
+                <p style="position:relative; left:-20%; font-size:10">
+                *Publications dated after 2010 are done outside my full-time commitment as a Bioinformatician.
+                </p>
+            </div>
+        </div>
+    </div>
+     
+	<div class="intron">
+	</div>
+    
+    <div class="section" id="teachingSec">
+        <div class="exon overview" id="teaching">
+            <div class="content" >
+                <h1>Teaching</h1>
+                <br>Since as far as I can remember, I have always enjoyed the process of explaining concepts in a close-to-life fashion. It brings me great satisfaction in convincing people of ideas and theories. It is for this reason that after college, I have successfully applied for a high-school teaching position while preparing for graduate school. Unfortunately the timing did not quite work out for me to enjoy teaching at that time, but the idea never faded away.<br/><br/>
+                My first teaching experience came in 2006, when I was charged to lead six classes of undergraduate students through their lab courses. During the two semesters, I have delivered lab lectures, designed and improved syllabi, designed and given dozens of quizzes and enjoyed every moment of the process.<br/><br/>
+                <span  class="prevSegButton">Previous section</span>
+                <span  class="menu" id="teachingfeedbackmenu">| Student Feedbacks</span>
+            </div> <!-- end content-->
+        </div> <!-- end teaching-->
+        <div class="intron">
+        </div>
+
+        <div class="exon" id="teachingfeedback">
+            <div class="content">
+                <h2>Students (anonymous) Feedbacks</h2>
+                <br/>“It is hard having a timed quiz because there are so many analytical questions. Also, the quiz material was not always specified the week before so I think a study guide or vocab list would be helpful to guide students as to what to expect. <strong>Phil always answered every question, he was so helpful and patient.</strong>”<br/>
+                <hr/>
+                <br/>“Phill was very helpful and did everything he could to help us understand the topics”
+
+                <hr/>
+                <br/>“Very helpful and very understanding”
+
+                <hr/>
+                <br/>“Phill is awesome!!! He was my favorite teacher this semester.”
+
+                <hr/>
+                <br>“Phill (Lifeng Lin) has been an awesome teacher and he has really made my biology lab enjoyable. He is easy to talk to and always teaches on-level, pertinent information. Phill is funny, but at the same time takes his class seriously. <strong>He is by far the best lab teacher I could have asked for</strong>. PHILL RULES!!”<br/>
+
+                <hr/>
+                <br/>“A+”
+                <hr>
+                <br>“Lifeng was an awesome teacher! He kept us interested in the subjects. I don't think anyone in my lab was a Biology major, so <strong>he made it fun for us to learn about something that we didn't necessarily need to learn</strong>. And he made us laugh a lot; something key to having fun in a class.”<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="intron">
+    </div>
+    
+    <!-- Add more sections and introns as needed -->
+
+	<div class="exon" id="timeline">
+		<div class="content">
+        <h1>Timeline</h1>
+        <iframe style="opacity: .8" src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0AlCwD4BRUvv3dE85d0trV2gwN01SeUh3eEc5TV9PRVE&font=Bevan-PotanoSans&maptype=toner&lang=en&start_at_slide=1&start_zoom_adjust=1&height=600' width='100%' height='650' frameborder='0'></iframe>
+		</div>
+	</div>
+    
+	<div id="contact">
+
+		<h1>Education</h1>
+		<p><b>Ph.D.</b> 2010</br>
+		University of Georgia</br>
+		</br>
+		<!--<b>B.S.</b> 2003</br>
+		Fudan University, Shanghai, China</br>
+		•	Major: Biology</p>-->
+        
+        <h1>Skill Sets</h1>
+		<p>
+			• Theoretical trainings in genetics and genomic analysis methods including genetic mapping, molecular marker discovery, genome assembly and gene predictions, comparative genomics and genome evolution studies;
+			</br>
+			• Technical trainings in nucleic acid-related molecular lab techniques including DNA extraction, PCR, sequencing, oligonucleotide probe-related handling and experimentations;
+			<br/><br/>
+			• Scripting language preference: Python</br>
+            • Database preference: MySql<br/>
+            • Statistical analysis: Python-Pandas, R<br/>
+		</p>
+        
+        <h1>Contact</h1>
+        <p>BioinformaticsScientist at gmail dot com</p>
+        
+        <!--<span style="display: inline-block; position:absolute; bottom: 0px; color:#eee; word-wrap: break-word; word-break: break-all">BioinformaticsScientist@gmail.com</span>-->
+	</div>
+
+</body>
+</html>
