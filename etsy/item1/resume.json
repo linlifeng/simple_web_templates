@@ -1,0 +1,78 @@
+{
+    "bg": "./images/bg.jpg",
+    "name": "John Smith",
+    "overview": "Overview Content",
+    "contact": "contact content",
+    "sections": [
+      {
+        "id": "cepheid",
+        "title": "Cepheid",
+        "pages": [
+          {
+            "title": "Cepheid (2020.10 to present)",
+            "content": "section 1 page1 content"
+          },
+          {
+            "title": "Major Achievements",
+            "content": "section 1 page2 content"
+          }
+        ]
+      },
+      {
+        "id": "biorad",
+        "title": "BioRad Labs",
+        "pages": [
+          {
+            "title": "page1",
+            "content": "section 1 page1 content"
+          },
+          {
+            "title": "page2",
+            "content": "section 1 page2 content"
+          }
+        ]
+      },
+      {
+        "id": "paragon",
+        "title": "Paragon Genomics",
+        "pages": [
+          {
+            "title": "page1",
+            "content": "section 1 page1 content"
+          },
+          {
+            "title": "page2",
+            "content": "section 1 page2 content"
+          }
+        ]
+      },
+      {
+        "id": "thermofisher",
+        "title": "Thermo Fisher Scientific",
+        "pages": [
+          {
+            "title": "page1",
+            "content": "section 1 page1 content"
+          },
+          {
+            "title": "page2",
+            "content": "section 1 page2 content"
+          }
+        ]
+      },
+      {
+        "id": "nanosphere",
+        "title": "Nanosphere inc",
+        "pages": [
+          {
+            "title": "page1",
+            "content": "section 1 page1 content"
+          },
+          {
+            "title": "page2",
+            "content": "section 1 page2 content"
+          }
+        ]
+      }
+    ]
+  }

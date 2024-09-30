@@ -1,0 +1,372 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- <script src="functions.js"></script> -->
+    <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css.css" />
+    <script>
+    $(document).ready(function(){
+        $('#menudiv').hide();
+        $('#contact').hide();
+        $('#menuicon').click(
+            function(){
+                $("#menudiv").fadeIn().animate({'width': menuwidth},0);
+                $("html").animate({'right': menuwidth},0);
+            });
+        $('.menu,#namelogo').click(
+            function(){
+                $('#contact').fadeOut();
+                $("html").delay(1000).animate({'right': '0px'},100);
+                $("#menudiv").delay(1000).fadeOut();
+                
+                $('.exon').animate({opacity: 1},200);
+            }
+        );
+
+        $('#namelogo').click(function(){
+            $("html,body").animate({scrollTop: $('#namecard').offset().top},1000);
+        }); 
+        $('#contact').click(function(){
+            $('#contact').fadeOut();
+            $("#menudiv").fadeOut();
+            $("html").delay(10).animate({'right': '0px'},100);
+        });        
+        $('#contactmenu').click(function(){
+            $("#contact").fadeIn();
+        });
+
+        $('.exon, .content, #contact').click(function(){
+            $("#menudiv").fadeOut();
+            $("html").delay(10).animate({'right': '0px'},100);
+        });
+    
+        
+            $('#cepheid_menu').click(function(){
+                $("html,body").animate({scrollTop: $("#cepheid .exon .content").offset().top},1000);
+            });
+        
+            $('#biorad_menu').click(function(){
+                $("html,body").animate({scrollTop: $("#biorad .exon .content").offset().top},1000);
+            });
+        
+            $('#paragon_menu').click(function(){
+                $("html,body").animate({scrollTop: $("#paragon .exon .content").offset().top},1000);
+            });
+        
+            $('#thermofisher_menu').click(function(){
+                $("html,body").animate({scrollTop: $("#thermofisher .exon .content").offset().top},1000);
+            });
+        
+            $('#nanosphere_menu').click(function(){
+                $("html,body").animate({scrollTop: $("#nanosphere .exon .content").offset().top},1000);
+            });
+        
+    });
+    </script>
+    <style>
+        
+            #cepheid .intron{
+                background: url('./images/cepheid_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #cepheid .exon{
+                background: url('./images/cepheid_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #cepheid .exon .exon_bg{
+                background: url('./images/cepheid_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+            }
+        
+            #biorad .intron{
+                background: url('./images/biorad_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #biorad .exon{
+                background: url('./images/biorad_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #biorad .exon .exon_bg{
+                background: url('./images/biorad_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+            }
+        
+            #paragon .intron{
+                background: url('./images/paragon_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #paragon .exon{
+                background: url('./images/paragon_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #paragon .exon .exon_bg{
+                background: url('./images/paragon_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+            }
+        
+            #thermofisher .intron{
+                background: url('./images/thermofisher_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #thermofisher .exon{
+                background: url('./images/thermofisher_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #thermofisher .exon .exon_bg{
+                background: url('./images/thermofisher_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+            }
+        
+            #nanosphere .intron{
+                background: url('./images/nanosphere_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #nanosphere .exon{
+                background: url('./images/nanosphere_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+
+            }
+            #nanosphere .exon .exon_bg{
+                background: url('./images/nanosphere_bg.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
+            }
+        
+    </style>
+</head>
+<body>
+    <div id="menuicon"><img src="./images/menu_icon.png"></div>
+    <div id="menudiv">
+        <span id="namelogo">John Smith</span>
+        </br>
+        
+        <span class ="menu" id="cepheid_menu">Cepheid</span><br/>
+        
+        <span class ="menu" id="biorad_menu">BioRad Labs</span><br/>
+        
+        <span class ="menu" id="paragon_menu">Paragon Genomics</span><br/>
+        
+        <span class ="menu" id="thermofisher_menu">Thermo Fisher Scientific</span><br/>
+        
+        <span class ="menu" id="nanosphere_menu">Nanosphere inc</span><br/>
+        
+        <span class ="menu" id="contactmenu">Resume & Contact</span>
+    </div>
+        
+    <div class="exon" id="namecard">
+        <div class="exon_bg"></div>
+        <div id ="statement">
+            <h1>"Who are you?"</h1>
+            <p>
+            My name is John Smith and I am a Designer.
+            </p> 
+            <h1>"What is this place?"</h1>
+            <p>
+            This is my online resume. 
+            </br>
+            </p>
+            <h1>"Where do I start?"</h1>
+            <p>
+            Click the icon to the top-right corner or simply start scrolling. Enjoy!
+            </p>
+        </div>
+    </div>    
+    
+    <div class="intron">
+    </div>
+
+    
+    <div class="section" id="cepheid">
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>Cepheid (2020.10 to present)</h1>
+                section 1 page1 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>Major Achievements</h1>
+                section 1 page2 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+    </div>
+    <div class="intron">
+    </div>
+    
+    <div class="section" id="biorad">
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page1</h1>
+                section 1 page1 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page2</h1>
+                section 1 page2 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+    </div>
+    <div class="intron">
+    </div>
+    
+    <div class="section" id="paragon">
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page1</h1>
+                section 1 page1 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page2</h1>
+                section 1 page2 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+    </div>
+    <div class="intron">
+    </div>
+    
+    <div class="section" id="thermofisher">
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page1</h1>
+                section 1 page1 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page2</h1>
+                section 1 page2 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+    </div>
+    <div class="intron">
+    </div>
+    
+    <div class="section" id="nanosphere">
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page1</h1>
+                section 1 page1 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+        <div class="exon" >
+            <div class="exon_bg"></div>
+            <div class="content" >
+                <h1>page2</h1>
+                section 1 page2 content
+            </div>
+        </div>
+        <div class="intron">
+        </div>
+        
+    </div>
+    <div class="intron">
+    </div>
+    
+
+    <div id="contact">
+        contact content
+	</div>
+    
+    <!-- Add more sections and introns as needed -->
+
+
+
+</body>
+</html>

@@ -1,4 +1,6 @@
 from jinja2 import Environment, FileSystemLoader
+import json
+from sys import argv
 
 # Define the folder containing the templates
 file_loader = FileSystemLoader('templates')
@@ -11,21 +13,21 @@ template = env.get_template('index.html')
 
 # Define data to pass into the template
 data = {
-    'bg': './images/blur.jpg',
+    'bg': './images/bg.jpg',
     'name': 'John Smith',
-    'contact':"test contact content",
+    "overview": "Overview Content",
+    'contact':"contact content",
     'sections': [
         {
-            'id': 'section_1',
-            'title': 'Section 1',
-            'bg': './images/coding_screen1_clear.jpg',
+            'id': 'cepheid',
+            'title': 'Cepheid',
             'pages': [
                 {
-                    "title": "Page 1 Title",
+                    "title": "Cepheid (2020.10 to present)",
                     "content": "section 1 page1 content"
                 },
                 {
-                    "title": "Page 2 Title",
+                    "title": "Major Achievements",
                     "content": "section 1 page2 content"
                 },
             ] 
@@ -33,7 +35,34 @@ data = {
         {
             'id': 'section_2',
             "title": 'Section 2',
-            'bg': "./images/research2_clear.jpg",
+            'pages': [
+                {
+                    "title": "page1",
+                    "content": "section 1 page1 content"
+                },
+                {
+                    "title": "page2",
+                    "content": "section 1 page2 content"
+                },
+            ] 
+        },
+        {
+            'id': 'section_3',
+            "title": 'Section 3',
+            'pages': [
+                {
+                    "title": "page1",
+                    "content": "section 1 page1 content"
+                },
+                {
+                    "title": "page2",
+                    "content": "section 1 page2 content"
+                },
+            ] 
+        },
+        {
+            'id': 'section_4',
+            "title": 'Section 4',
             'pages': [
                 {
                     "title": "page1",
@@ -47,7 +76,7 @@ data = {
         }
     ]
 }
-
+data = json.load(open(argv[1]))
 # Render the template with data
 output = template.render(data)
 
