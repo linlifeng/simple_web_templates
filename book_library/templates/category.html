@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+<h5>{{ category }} 书籍 (Books)</h5>
+<ul class="list-group">
+    {% for book in books %}
+    <li class="list-group-item">
+        <a href="{{ url_for('book', category_name=category, book_name=book) }}">{{ book }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block content %}
+<h3>{{ category }} 分类 (Category)</h3>
+<p>请选择一本书 (Select a book to start reading):</p>
+{% endblock %}

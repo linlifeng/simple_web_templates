@@ -1,0 +1,30 @@
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.sidebar {
+    border-right: 1px solid #ddd;
+}
+
+.book-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    font-size: 14px;
+}
+
+.chapter-content h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.chapter-body {
+    line-height: 1.8;
+    font-size: 18px;
+}

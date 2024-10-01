@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="text-center">
+    <h2 class="my-4">欢迎来到书籍库 (Welcome to the Digital Book Library)</h2>
+    <p>请选择一个分类开始阅读 (Select a category to start reading):</p>
+</section>
+
+<div class="row">
+    {% for category in categories %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ category }}</h5>
+                <a href="{{ url_for('category', category_name=category) }}" class="btn btn-primary">浏览 (Browse)</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

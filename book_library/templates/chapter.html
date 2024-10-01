@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+<h5>{{ book }}</h5>
+<ul class="list-group">
+    {% if chapters %}
+        {% for chapter in chapters %}
+        <li class="list-group-item">
+            <a href="{{ url_for('chapter', category_name=category, book_name=book, chapter_name=chapter) }}">
+                {{ chapter }}
+            </a>
+        </li>
+        {% endfor %}
+    {% else %}
+        <li class="list-group-item"></li>
+    {% endif %}
+</ul>
+{% endblock %}
+
+{% block content %}
+<article class="chapter-content">
+    <h2>{{ chapter_name.replace('_', ' ').title() }}</h2>
+    <div class="chapter-body">
+        {{ content|safe }}
+    </div>
+</article>
+{% endblock %}
