@@ -2,7 +2,14 @@
 
 {% block content %}
 <section class="text-center">
-    <h2 class="my-4">欢迎来到书籍库 (Welcome to the Digital Book Library)</h2>
+    <h2 class="my-4">立峰的中文书库</h2>
+
+    <!-- Add the search form here -->
+    <form class="form-inline justify-content-center mb-4" action="{{ url_for('search') }}" method="GET">
+        <input class="form-control mr-2" type="text" name="query" placeholder="搜索书籍名称 (Search Book Name)" aria-label="Search" required>
+        <button class="btn btn-primary" type="submit">搜索 (Search)</button>
+    </form>
+
     <p>请选择一个分类开始阅读 (Select a category to start reading):</p>
 </section>
 

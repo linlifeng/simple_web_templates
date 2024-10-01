@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, request
 
 app = Flask(__name__)
 
@@ -58,6 +58,24 @@ def chapter(category_name, book_name, chapter_name):
         chapter_name=chapter_name,
         chapters=chapters  # Pass chapters to the template
     )
+
+@app.route('/search')
+def search():
+    query = request.args.get('query').lower()  # Get the search query and convert it to lowercase
+    matching_books = []
+
+    # Loop through the categories and books to find matches
+    for category in os.listdir(BOOKS_DIR):
+        category_path = os.path.join(BOOKS_DIR, category)
+        if os.path.isdir(category_path):
+            books = os.listdir(category_path)
+            for book in books:
+                if query in book.lower():  # Match the search query with the book name
+                    matching_books.append((category, book))
+
+    # Render the search results template
+    return render_template('search_results.html', query=query, matching_books=matching_books)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
