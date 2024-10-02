@@ -6,12 +6,10 @@
     "email": "Bioinformatics.Scientist@gmail.com"
   },
   "highlights": [
-    "14+ years of experience delivering robust assays across a diverse field: cancer early-detection, immune repertoire, and infectious diseases",
-    "Building software, databases, and programs to modernize assay design processes",
-    "Experience with various technology platforms: NGS, qPCR, single-cell, microarray",
-    "Ability to build bioinformatics functions to support efficient assay development",
-    "Evaluating feasibility and value of new assays and technologies",
-    "Effective communication of bioinformatics concepts with cross-functional teams"
+    "14+ years of experience delivering robust point-of-care assays across multiple disciplines: infectious diseases, cancer early-detection and immune repertoire",
+    "Experienced with various technology platforms: NGS, qPCR, single-cell, microarray",
+    "Built successful bioinformatics functions to support efficient assay development",
+    "Led a team to work cross-functionally in fast-paced projects"
   ],
   "experience": [
     {
@@ -23,9 +21,10 @@
         "Built bioinformatics libraries for assay development (Python, AWS)",
         "Created a company-wide bioinformatics web portal for assay storage and evaluation (Flask, MySQL, Docker, nginx)",
         "Set up a Galaxy server for automated workflows",
-        "Consulted leadership on bioinformatics aspects for decision-making",
+        "Advised company leadership on bioinformatics aspects for decision-making",
         "Developed thermodynamic predictive models for special nucleotides"
-      ]
+      ],
+      "reason_for_termination": "None - still working here."
     },
     {
       "company": "Bio-Rad Laboratories",
@@ -36,7 +35,7 @@
         "Led design engine updates for the Digital Assays customer portal",
         "Designed in-house infectious disease assays"
       ],
-      "reason_for_termination": "Resigned for a leadership opportunity at Cepheid."
+      "reason_for_termination": "Resigned for a better career opportunity at Cepheid."
     },
     {
       "company": "Paragon Genomics",
