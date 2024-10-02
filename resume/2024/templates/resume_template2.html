@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume.name }}'s Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        .resume-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .btn-download {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="resume-header">
+            <h1>{{ resume.name }}</h1>
+            <p>{{ resume.tagline }}</p>
+            <p>Phone: {{ resume.contact.phone }} | Email: {{ resume.contact.email }}</p>
+        </div>
+
+        <div class="section" id="highlights">
+            <h2>Highlights</h2>
+            <ul>
+                {% for highlight in resume.highlights %}
+                <li>{{ highlight }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section" id="experience">
+            <h2>Experience</h2>
+            {% for job in resume.experience %}
+            <h4>{{ job.title }} - {{ job.company }}</h4>
+            <p><strong>Duration:</strong> {{ job.duration }}</p>
+            <ul>
+                {% for contribution in job.key_contributions %}
+                <li>{{ contribution }}</li>
+                {% endfor %}
+            </ul>
+            <p><strong>Reason for termination:</strong> {{ job.reason_for_termination }}</p>
+            <hr>
+            {% endfor %}
+        </div>
+
+        <div class="section" id="patents">
+            <h2>Patents</h2>
+            {% for patent in resume.patents %}
+            <p><strong>{{ patent.name }}</strong></p>
+            <p>Date: {{ patent.date }} | ID: {{ patent.id }}</p>
+            <p>Inventors: {{ patent.inventors | join(', ') }}</p>
+            <hr>
+            {% endfor %}
+        </div>
+
+        <div class="section" id="publications">
+            <h2>Publications</h2>
+            <p>Research Gate Profile: <a href="{{ resume.publications.researchGateProfile }}">{{ resume.publications.researchGateProfile }}</a></p>
+            <h3>Journal Publications</h3>
+            <ul>
+                {% for pub in resume.publications.journalPublications %}
+                <li>
+                    <strong>{{ pub.authors | join(', ') }}</strong> ({{ pub.year }}). 
+                    “{{ pub.title }}” <br>
+                    {% if pub.journal %}{{ pub.journal }}{% endif %}
+                    {% if pub.volume %} {{ pub.volume }}{% endif %}
+                    {% if pub.pages %}: {{ pub.pages }}{% endif %}.
+                </li>
+                {% endfor %}
+            </ul>
+            <h3>Conference Appearances</h3>
+            <ul>
+                {% for conf in resume.publications.conferenceAppearances %}
+                <li>
+                    <strong>{{ conf.authors | join(', ') }}</strong> ({{ conf.year }}). 
+                    “{{ conf.title }}” <br>
+                    {% if conf.event %}{{ conf.event }}{% endif %}
+                    {% if conf.journal %}, {{ conf.journal }}{% endif %}
+                    {% if conf.volume %} {{ conf.volume }}{% endif %}
+                    {% if conf.pages %}: {{ conf.pages }}{% endif %}.
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section" id="profiles">
+            <h2>Public Profiles</h2>
+            <ul>
+                {% for platform, url in resume.public_profiles.items() %}
+                <li><a href="{{ url }}" target="_blank">{{ platform }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section" id="education">
+            <h2>Education</h2>
+            {% for edu in resume.education %}
+            <p>{{ edu.degree }} - {{ edu.institution }} ({{ edu.year }})</p>
+            <hr>
+            {% endfor %}
+        </div>
+
+        <div class="section" id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                {% for cert in resume.certifications %}
+                <li>
+                    <strong>{{ cert.title }}</strong> ({{ cert.year }}){% if cert.distinction %}, {{ cert.distinction }}{% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% if not is_pdf %}
+        <div class="btn-download">
+            <a href="/export/pdf" class="btn btn-primary">Download as PDF</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

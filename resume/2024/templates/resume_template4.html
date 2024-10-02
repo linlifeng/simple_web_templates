@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume.name }}'s Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            line-height: 1.4; /* Reduced line height for more content */
+            color: #333333;
+            font-size: 10pt; /* Smaller font size */
+        }
+        .resume-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .resume-header h1 {
+            margin: 0;
+            font-size: 24pt; /* Slightly larger for header */
+        }
+        .resume-header p {
+            margin: 2px 0; /* Reduced margin */
+        }
+        .section {
+            margin-top: 20px; /* Reduced margin */
+        }
+        .section h2 {
+            font-size: 1.3em; /* Smaller section titles */
+            border-bottom: 1px solid #000; /* Keep it simple */
+            padding-bottom: 2px; /* Reduced padding */
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 15px; /* Reduced margin */
+            padding-left: 0; /* Removed padding */
+        }
+        h4 {
+            margin: 5px 0 3px; /* Reduced margins */
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 15px 0; /* Reduced margin */
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-header">
+        <h1>{{ resume.name }}</h1>
+        <p>{{ resume.tagline }}</p>
+        <p>Phone: {{ resume.contact.phone }} | Email: {{ resume.contact.email }}</p>
+    </div>
+
+    <div class="section" id="highlights">
+        <h2>Highlights</h2>
+        <ul>
+            {% for highlight in resume.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section" id="experience">
+        <h2>Experience</h2>
+        {% for job in resume.experience %}
+        <h4>{{ job.title }} - {{ job.company }}</h4>
+        <p><strong>Duration:</strong> {{ job.duration }}</p>
+        <ul>
+            {% for contribution in job.key_contributions %}
+            <li>{{ contribution }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        {% endfor %}
+    </div>
+
+    <div class="section" id="publications">
+        <h2>Publications</h2>
+        <p>Research Gate Profile: <a href="{{ resume.publications.researchGateProfile }}">{{ resume.publications.researchGateProfile }}</a></p>
+        <h3>Journal Publications</h3>
+        <ul>
+            {% for pub in resume.publications.journalPublications %}
+            <li>
+                <strong>{{ pub.authors | join(', ') }}</strong> ({{ pub.year }}). 
+                “{{ pub.title }}” <br>
+                {% if pub.journal %}{{ pub.journal }}{% endif %}
+                {% if pub.volume %} {{ pub.volume }}{% endif %}
+                {% if pub.pages %}: {{ pub.pages }}{% endif %}.
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section" id="education-certifications">
+        <h2>Education & Certifications</h2>
+        <div>
+            <h3>Education</h3>
+            {% for edu in resume.education %}
+            <p>{{ edu.degree }} - {{ edu.institution }} ({{ edu.year }})</p>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Certifications</h3>
+            <ul>
+                {% for cert in resume.certifications %}
+                <li>
+                    <strong>{{ cert.title }}</strong> ({{ cert.year }}){% if cert.distinction %}, {{ cert.distinction }}{% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" id="profiles">
+        <h2>Public Profiles</h2>
+        <ul>
+            {% for platform, url in resume.public_profiles.items() %}
+            <li><a href="{{ url }}" target="_blank">{{ platform }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

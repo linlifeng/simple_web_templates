@@ -1,0 +1,334 @@
+{
+  "name": "Lifeng Lin, PhD",
+  "tagline": "Developing Code To Enable Better Assays",
+  "contact": {
+    "phone": "224-444-0263",
+    "email": "Bioinformatics.Scientist@gmail.com"
+  },
+  "highlights": [
+    "14+ years of experience delivering robust assays across a diverse field: cancer early-detection, immune repertoire, and infectious diseases",
+    "Building software, databases, and programs to modernize assay design processes",
+    "Experience with various technology platforms: NGS, qPCR, single-cell, microarray",
+    "Ability to build bioinformatics functions to support efficient assay development",
+    "Evaluating feasibility and value of new assays and technologies",
+    "Effective communication of bioinformatics concepts with cross-functional teams"
+  ],
+  "experience": [
+    {
+      "company": "Cepheid inc. (A Danaher Company)",
+      "title": "Principle Scientist - Bioinformatics",
+      "duration": "2020.10 - present",
+      "key_contributions": [
+        "Managed Bioinformatics Engineering team, overseeing server setup, code repository organization, and workflow automation",
+        "Built bioinformatics libraries for assay development (Python, AWS)",
+        "Created a company-wide bioinformatics web portal for assay storage and evaluation (Flask, MySQL, Docker, nginx)",
+        "Set up a Galaxy server for automated workflows",
+        "Consulted leadership on bioinformatics aspects for decision-making",
+        "Developed thermodynamic predictive models for special nucleotides"
+      ]
+    },
+    {
+      "company": "Bio-Rad Laboratories",
+      "title": "Data Scientist III",
+      "duration": "2019.04 - 2020.10",
+      "key_contributions": [
+        "Maintained the performance of the Digital Assay Design Engine",
+        "Led design engine updates for the Digital Assays customer portal",
+        "Designed in-house infectious disease assays"
+      ],
+      "reason_for_termination": "Resigned for a leadership opportunity at Cepheid."
+    },
+    {
+      "company": "Paragon Genomics",
+      "title": "Panel Design Lead / System Admin",
+      "duration": "2017.12 - 2019.04",
+      "key_contributions": [
+        "Built ParagonDesigner, an online portal to track custom design requests (WordPress + PHP + Python)",
+        "Created a pipeline that removed bottlenecks in RNA expression assay design (Bash + Python + R)",
+        "Set up and maintained AWS clusters for data analysis",
+        "Administered company website, FTP, and data analysis servers",
+        "Repackaged NGS data processing pipeline for inexperienced customers (Snakemake + Anaconda + Python)"
+      ],
+      "reason_for_termination": "Relocated for family reasons."
+    },
+    {
+      "company": "Thermo Fisher Scientific",
+      "title": "Staff Scientist (Promoted from Scientist III)",
+      "duration": "2015.04 - 2017.12",
+      "key_contributions": [
+        "Led the design of non-standard panels, including Immune Repertoire (patent pending) and plant barcoding",
+        "Improved design of custom human NGS panels for FDA submissions",
+        "Wrote design pipelines for bacterial and viral target analysis"
+      ],
+      "reason_for_termination": "Joined Paragon to help a colleague with a startup."
+    },
+    {
+      "company": "Nanosphere inc (A Luminex Company)",
+      "title": "Senior Bioinformatics Scientist",
+      "duration": "2010.6 - 2015.4",
+      "key_contributions": [
+        "Performed genome analysis for target pathogens",
+        "Developed sequence databases for over 500 organisms",
+        "Led the design of Verigene Enteric Pathogen panels (Virus, bacteria, and parasites)",
+        "Co-designed Verigene Respiratory Pathogen assays and Blood Sepsis assays",
+        "Built automated pipelines and portals"
+      ],
+      "reason_for_termination": "Relocated to California from Illinois."
+    },
+    {
+      "company": "University of Georgia, Plant Genome Mapping Lab (PGML)",
+      "title": "PhD Student / Research Assistant",
+      "duration": "2003.8 - 2010.5",
+      "major_projects": [
+        "Led in silico data analysis for the D-genome cotton physical mapping project",
+        "Fine-mapped the cotton Li2 gene (fiberless mutant)",
+        "Identified ancient genome duplication events in cotton compared to grape"
+      ]
+    }
+  ],
+  "patents": [
+    {
+      "name": "Compositions and Methods for Immune Repertoire Sequencing",
+      "date": "Filed Jan 17th, 2018",
+      "id": "WO2020018836",
+      "inventors": [
+        "Timothy Looney",
+        "Geoffrey Lowman",
+        "Lifeng Lin"
+      ]
+    }
+  ],
+  "publications": {
+      "researchGateProfile": "http://www.researchgate.net/profile/Lifeng_Lin/publications",
+      "journalPublications": [
+        {
+          "authors": ["Paterson, A. H.", "J. F. Wendell", "et al."],
+          "year": 2012,
+          "title": "Repeated polyploidization of Gossypium genomes and the evolution of spinnable cotton fibres.",
+          "journal": "Nature",
+          "volume": 492,
+          "pages": "423-427"
+        },
+        {
+          "authors": ["Lin, L.", "A. H. Paterson"],
+          "year": 2009,
+          "title": "Physical composition and organization of the Gossypium genomes.",
+          "journal": "Genetics and Genomics of Cotton",
+          "editor": "A. H. Paterson",
+          "publisher": "Springer"
+        },
+        {
+          "authors": ["Lin, L.", "A. H. Paterson"],
+          "year": 2011,
+          "title": "Size variation in homologous segments across divergent plant genomes.",
+          "journal": "Mob Genet Elements",
+          "volume": 1,
+          "issue": 2,
+          "pages": "92-96"
+        },
+        {
+          "authors": ["Lin, L.", "G. J. Pierce", "et al."],
+          "year": 2010,
+          "title": "A draft physical map of a D-genome cotton species (Gossypium raimondii).",
+          "journal": "BMC Genomics",
+          "volume": 11,
+          "pages": "395"
+        },
+        {
+          "authors": ["Lin, L.", "H. Tang", "et al."],
+          "year": 2011,
+          "title": "Comparative analysis of Gossypium and Vitis genomes indicates genome duplication specific to the Gossypium lineage.",
+          "journal": "Genomics",
+          "volume": 97,
+          "issue": 5,
+          "pages": "313-320"
+        },
+        {
+          "authors": ["He, S.", "Y. Zheng", "et al."],
+          "year": 2013,
+          "title": "Converting restriction fragment length polymorphism to single-strand conformation polymorphism markers and its application in the fine mapping of a trichome gene in cotton.",
+          "journal": "Plant Breeding",
+          "volume": 132,
+          "issue": 3,
+          "pages": "337-343"
+        },
+        {
+          "authors": ["Paterson, A. H.", "J. E. Bowers", "et al."],
+          "year": 2009,
+          "title": "Comparative genomics of grasses promises a bountiful harvest.",
+          "journal": "Plant Physiol",
+          "volume": 149,
+          "issue": 1,
+          "pages": "125-131"
+        },
+        {
+          "authors": ["Paterson, A. H.", "B. K. Mashope", "L. Lin"],
+          "year": 2009,
+          "title": "The Comparative Genomics of Orphan Crops.",
+          "journal": "ATDF Journal",
+          "volume": 6,
+          "issue": 3,
+          "pages": "16-23"
+        },
+        {
+          "authors": ["Rong, J.", "F. A. Feltus", "L. Lin", "et al."],
+          "year": 2010,
+          "title": "Gene copy number evolution during tetraploid cotton radiation.",
+          "journal": "Heredity (Edinb)",
+          "volume": 105,
+          "issue": 5,
+          "pages": "463-472"
+        },
+        {
+          "authors": ["Wang, X.", "M. J. Torres", "et al."],
+          "year": 2011,
+          "title": "A physical map of Brassica oleracea shows complexity of chromosomal changes following recursive paleopolyploidizations.",
+          "journal": "BMC Genomics",
+          "volume": 12,
+          "pages": "470"
+        },
+        {
+          "authors": ["Ding, M.", "J. Chen", "et al."],
+          "year": 2014,
+          "title": "Genome-wide investigation and transcriptome analysis of the WRKY gene family in Gossypium.",
+          "journal": "Molecular Genetics and Genomics",
+          "status": "Epub ahead of print"
+        },
+        {
+          "authors": ["Ding, M", "Y. Jiang", "et al."],
+          "year": 2013,
+          "title": "Gene expression profile analysis of Ligon lintless (Li1) mutant reveals important insights.",
+          "journal": "Unknown"
+        }
+      ],
+      "conferenceAppearances": [
+        {
+          "authors": ["Lucie Li", "Lily Liu", "Jacey Zhang", "Jeffery Liu", "Lifeng Lin", "Guoying Liu", "Zhitong Liu"],
+          "year": 2018,
+          "title": "Detecting low allele frequency somatic mutations using targeted amplicon sequencing and a novel double strand molecular barcoding scheme.",
+          "event": "AACR Annual Meeting 2018"
+        },
+        {
+          "authors": ["Timothy Looney", "Geoffrey Lowman", "Elizabeth Linch", "Denise Topacio", "Lauren Miller", "Lifeng Lin", "Aleksandr Pankov", "Janice Au-Young", "Mark Andersen", "Ann Mongan", "Fiona Hyland"],
+          "year": 2017,
+          "title": "Tracking the interplay between circulating and tumor-infiltrating T cells using AmpliSeq-based Ion Torrent TCRβ immune repertoire sequencing.",
+          "journal": "Journal of Clinical Oncology",
+          "volume": 35,
+          "issue": "15_suppl",
+          "pages": "e14518"
+        },
+        {
+          "authors": ["Ann Mongan", "Geoffrey Lowman", "Yuan-Chieh Ku", "Timothy Looney", "Lifeng Lin", "Xinzhan Peng", "Fiona Hyland"],
+          "year": 2017,
+          "title": "Using NGS to characterize 40 NSCLC tumor with gene expression and tumor infiltrating T cell repertoire profiling from FFPE and matched Fresh Frozen samples.",
+          "event": "Proceedings of the American Association for Cancer Research Annual Meeting 2017"
+        },
+        {
+          "authors": ["Denise S. Topacio-Hall", "Tim Looney", "Yongming Sun", "Lauren Miller", "Elizabeth Linch", "Geoffrey Lowman", "Lifeng Lin", "Mark Andersen", "Fiona Hyland", "Ann Mongan"],
+          "year": 2017,
+          "title": "Sequencing the human TCRβ repertoire on the Ion S5™ System.",
+          "journal": "Cancer Research",
+          "date": "July 1 2017",
+          "volume": 77
+        },
+        {
+          "authors": ["S. Marla", "M. Dado", "C. Gerstein", "et al."],
+          "year": 2013,
+          "title": "Development of Nanosphere’s Verigene BC-GN Test for rapid detection of Gram-negative bacteria and resistance determinants directly from positive blood cultures.",
+          "event": "23rd European Congress of Clinical Microbiology and Infectious Diseases"
+        },
+        {
+          "authors": ["Lin, L.", "Rong, J.", "Paterson, A.H."],
+          "year": 2009,
+          "title": "Progress toward cloning a gene involved in cotton fiber development (Ligon lintless-2, Li2) with the assistance of genetically anchored BAC libraries.",
+          "event": "Large Insert DNA Libraries and Their Applications Workshop at Plant & Animal Genome XVII"
+        },
+        {
+          "authors": ["Lifeng Lin", "Gary Pierce", "John E. Bowers", "et al."],
+          "year": 2010,
+          "title": "A Draft Physical Map of a D-genome Cotton Species (G. ramondii).",
+          "event": "Plant & Animal Genome XVIII",
+          "location": "San Diego, California"
+        },
+        {
+          "authors": ["Tang, H.", "Lin, L.", "Bowers, J.E.", "Rong, J.", "Paterson A.H."],
+          "year": 2006,
+          "title": "Large Scale EST Resource Compilation and Applications for Phylogenomics of Major Crop Plants.",
+          "event": "Annual SMBE Meeting 2006",
+          "location": "Tempe, Arizona"
+        },
+        {
+          "authors": ["Lin, L.", "Pierce, G.", "Bowers, J.E.", "et al."],
+          "year": 2007,
+          "title": "Progress toward a fingerprinted physical map of D genome cotton G. raimondii.",
+          "event": "Plant & Animal Genome XV",
+          "location": "San Diego, California"
+        }
+      ]
+    },
+  
+  "public_profiles": {
+    "LinkedIn": "https://www.linkedin.com/in/lifeng-phil-lin-23a20111",
+    "GitHub": "https://github.com/linlifeng/",
+    "ResearchGate": "http://www.researchgate.net/profile/Lifeng_Lin/publications"
+  },
+  "education": [
+    {
+      "degree": "PhD",
+      "year": "2010",
+      "institution": "University of Georgia"
+    },
+    {
+      "degree": "B.S.",
+      "year": "2003",
+      "institution": "Fudan University"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "HarvardX: PH525.2x Linear Models and Matrix Algebra",
+      "year": 2016
+    },
+    {
+      "title": "HKUSTx: COMP102.1x Introduction to Java Programming",
+      "score": "99/100",
+      "year": 2016
+    },
+    {
+      "title": "The Data Scientist's Toolbox",
+      "completionStatus": "Completed with distinction",
+      "platform": "Coursera",
+      "year": 2015
+    },
+    {
+      "title": "R Programming",
+      "completionStatus": "Completed with distinction",
+      "platform": "Coursera",
+      "year": 2015
+    },
+    {
+      "title": "Design Control Concepts and Implementation Workshop",
+      "provider": "Oriel",
+      "year": 2014
+    },
+    {
+      "title": "MITx: 6.00.2x Introduction to Computational Thinking and Data Science",
+      "score": "97/100",
+      "year": 2014
+    },
+    {
+      "title": "MITx: 6.00.1x Introduction to Computer Science and Programming Using Python",
+      "score": "98/100",
+      "year": 2014
+    },
+    {
+      "title": "UC-Davis Bioinformatics Training Program",
+      "description": "High-throughput sequencing data analysis using command line",
+      "year": 2014
+    },
+    {
+      "title": "Excellence in Documentation of Teaching Proficiency",
+      "year": 2010
+    }
+  ]
+}
