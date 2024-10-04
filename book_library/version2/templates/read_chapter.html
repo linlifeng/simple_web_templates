@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ chapter_title }} - {{ book.name }} - 电子书库</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding-top: 20px;
+            background-color: #343a40;
+            color: #fff;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+        .sidebar a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+            flex: 1;
+        }
+        .chapter-content {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+    </style>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('d-none');
+        }
+    </script>
+</head>
+<body>
+    <button class="btn btn-primary toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <div class="sidebar">
+        <h4 class="text-center">书籍分类</h4>
+        <hr>
+        {% for category in library %}
+            <a href="#">{{ category }}</a>
+        {% endfor %}
+        <a href="/">返回首页</a>
+    </div>
+
+    <div class="content">
+        <h1>{{ book.name }}</h1>
+        <div class="chapter-content">
+            <h2>{{ title }}</h2>
+            <div>
+                {{ content|safe }} <!-- This assumes you're passing the HTML content of the chapter -->
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="{{ url_for('book_details', category=category, book_name=book.name) }}" class="btn btn-secondary">返回书籍详情</a>
+            {% if chapter_index > 0 %}
+                <a href="{{ url_for('read_chapter', category=category, book_name=book.name, chapter_number=chapter_index - 1) }}" class="btn btn-secondary">上一章</a>
+            {% endif %}
+            {% if chapter_index < book.catalogues|length - 1 %}
+                <a href="{{ url_for('read_chapter', category=category, book_name=book.name, chapter_number=chapter_index + 1) }}" class="btn btn-secondary">下一章</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <footer>
+        &copy; {{ current_year }} 电子书库 - 版权所有
+    </footer>
+</body>
+</html>
+

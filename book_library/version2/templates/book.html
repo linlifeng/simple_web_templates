@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book_info.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ book_info.title }}</h1>
+        <p><strong>Author:</strong> {{ book_info.author }}</p>
+        <p><strong>Description:</strong> {{ book_info.description }}</p>
+
+        <h2>Chapters</h2>
+        <ul>
+            {% for chapter in chapters %}
+            <li><a href="{{ url_for('chapter_view', category=category, book_name=book_name, chapter_idx=chapter.index) }}">{{ chapter.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+
