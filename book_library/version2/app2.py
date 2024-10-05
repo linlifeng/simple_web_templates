@@ -36,7 +36,7 @@ def load_books():
 @app.route('/')
 def home():
     library = load_books()  # Load the library object
-    return render_template('home.html', library=library)
+    return render_template('home2.html', library=library)
 
 
 @app.route('/book/<category>/<book_name>/')

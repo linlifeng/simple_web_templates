@@ -88,19 +88,25 @@
     <script>
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
+            const content = document.querySelector('.content');
+
             sidebar.classList.toggle('d-none');
+
+            // Adjust the content's margin based on sidebar visibility
+            if (sidebar.classList.contains('active')) {
+                content.style.marginLeft = '250px'; // Adjust based on sidebar width
+            } else {
+                content.style.marginLeft = '0';
+            }
         }
+
     </script>
 </head>
 <body>
     <button class="btn btn-primary toggle-btn" onclick="toggleSidebar()">☰</button>
     
     <div class="sidebar">
-        <h4 class="text-center">书籍分类</h4>
-        <hr>
-        {% for category in library %}
-            <a href="#">{{ category }}</a>
-        {% endfor %}
+        <br/><br/>
         <a href="/">返回首页</a>
     </div>
 

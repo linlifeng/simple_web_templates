@@ -73,8 +73,18 @@
     <script>
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
+            const content = document.querySelector('.content');
+
             sidebar.classList.toggle('d-none');
+ 
+            // Adjust the content's margin based on sidebar visibility
+            if (sidebar.classList.contains('active')) {
+                content.style.marginLeft = '250px'; // Adjust based on sidebar width
+            } else {
+                content.style.marginLeft = '0';
+            }
         }
+
     </script>
 </head>
 <body>
@@ -82,11 +92,19 @@
 
     <div class="sidebar">
         <h4 class="text-center">书籍分类</h4>
-        <hr>
-        {% for category in library %}
-            <a href="#">{{ category }}</a>
-        {% endfor %}
         <a href="/">返回首页</a>
+
+        <hr>
+        <h2>章节列表</h2>
+        <div class="chapter-list">
+            {% for title in book.catalogues %}
+                <div class="chapter">
+                    <a href="{{ url_for('read_chapter', category=category, book_name=book.name, chapter_number=loop.index0) }}">
+                        <div class="chapter-title">{{ title }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
     <div class="content">
